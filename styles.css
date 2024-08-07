@@ -7,7 +7,13 @@
   --darkgrey:  #676767;
 }
 
+body {
+  margin: 0;
+  padding:0;
+}
+
 header {
   background-color: var(--darkblue);
   color: var(--lightgrey);
+  display: flex;
 }
