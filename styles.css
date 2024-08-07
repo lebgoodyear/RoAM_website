@@ -16,4 +16,12 @@ header {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   display: flex;
+  padding: 16px 128px;
+}
+
+#logo {
+  max-width: 90px;
+  /*display: inline-block;*/
+  margin: 10px;
+  border-radius: 10%;
 }
