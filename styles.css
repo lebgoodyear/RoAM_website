@@ -6,3 +6,8 @@
   --midgrey: #BDBDBD;
   --darkgrey:  #676767;
 }
+
+header {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+}
