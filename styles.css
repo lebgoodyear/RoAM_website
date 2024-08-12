@@ -7,9 +7,26 @@
   --darkgrey:  #676767;
 }
 
-body {
+html, body {
   margin: 0;
-  padding:0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 128px;
+  flex-shrink: 0;
 }
 
 header {
@@ -39,4 +56,8 @@ nav ul {
   margin-left: auto;
   display: flex;
   gap: 24px;
+}
+
+.main {
+  flex: 1 0 auto;
 }
