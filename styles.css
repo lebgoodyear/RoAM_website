@@ -43,9 +43,9 @@ header {
 }
 
 #logo {
-  max-width: 70px;
+  max-width: 60px;
   /*display: inline-block;*/
-  border-radius: 10%;
+  border-radius: 0.5rem;
 }
 
 .title p {
@@ -68,6 +68,12 @@ nav ul {
 }
 
 .main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
   background-color: var(--midgrey);
   color: var(--darkblue);
   font-weight: 900;
@@ -107,3 +113,9 @@ nav ul {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/*.about {
+  background-color: var(--white);
+  color: var(--darkblue);
+  padding: 8px 128px;
+}*/
