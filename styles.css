@@ -68,7 +68,7 @@ nav ul {
   flex-direction: column;
 }
 
-.title {
+/*.title {
   background-color: var(--lightgrey);
   color: var(--darkblue);
   display: flex;
@@ -76,11 +76,11 @@ nav ul {
   align-items: center;
   font-weight: 900;
   font-size: 2em;
-}
+}*/
 
 .options {
   background-color: var(--midgrey);
-  color: var(--midblue);
+  color: var(--darkblue);
   font-weight: 900;
   display: flex;
   flex: 1 0 auto;
