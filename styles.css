@@ -62,14 +62,25 @@ nav ul {
 
 .main {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-  background-color: var(--midgrey);
+  background-color: var(--lightgrey);
   color: var(--darkblue);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 900;
   font-size: 2em;
+}
+
+.options {
+  background-color: var(--darkgrey);
+  color: var(--lightblue);
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-around;
+  align-items: stretch;
 }
