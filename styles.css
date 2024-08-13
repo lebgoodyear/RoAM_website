@@ -40,6 +40,7 @@ header {
   display: flex;
   padding: 8px 116px;
   align-items: center;
+  font-size: 0.9rem;
 }
 
 #logo {
@@ -74,7 +75,7 @@ nav ul {
 }
 
 .options {
-  background-color: var(--midgrey);
+  background-color: var(--white);
   color: var(--darkblue);
   font-weight: 900;
   display: flex;
@@ -85,7 +86,7 @@ nav ul {
 
 .shortcut {
   background-color: var(--white);
-  font-size: 2em;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -97,25 +98,39 @@ nav ul {
   background-color: var(--midblue);
   color: var(--white);
   font-weight: 900;
+  font-size: 1rem;
   border-style: none;
   border-radius: 0.5rem;
   padding: 10px;
 }
 
 .new {
-  background-image: url("img/dew_salyasin_pixabay_alpha22.png");
+  background-image: url("img/dew_salyasin_pixabay_alpha45.png");
   background-size: cover;
   background-repeat: no-repeat;
+  /*margin: 6px 3px 6px 0px;*/
 }
 
 .returning {
-  background-image: url("img/fields_alpha22.png");
+  background-image: url("img/fields_alpha45.png");
   background-size: cover;
   background-repeat: no-repeat;
+  /*margin: 6px 0px 6px 3px;*/
 }
 
-/*.about {
-  background-color: var(--white);
-  color: var(--darkblue);
-  padding: 8px 128px;
-}*/
+.about {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  padding: 36px 128px 36px 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 48px;
+  font-size: 2rem;
+}
+
+.about img {
+  max-width: 400px;
+  margin-left: 50px; 
+}
