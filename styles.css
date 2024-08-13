@@ -1,10 +1,12 @@
 :root {
   --darkblue: #003b6d;
+  --midblue: #3882F6;
   --lightblue: #6699cc;
   --white: #ffffff;
   --lightgrey: #ebedf3;
   --midgrey: #BDBDBD;
   --darkgrey:  #676767;
+  --black: #000000;
 }
 
 html, body {
@@ -12,7 +14,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-size: 1em;
-  font-family: Helvetica, sans-serif;
+  /*font-family: Helvetica, sans-serif;*/
 }
 
 body {
@@ -39,7 +41,7 @@ header {
 }
 
 #logo {
-  max-width: 90px;
+  max-width: 80px;
   /*display: inline-block;*/
   margin: 10px;
   border-radius: 10%;
@@ -77,10 +79,42 @@ nav ul {
 }
 
 .options {
-  background-color: var(--darkgrey);
-  color: var(--lightblue);
+  background-color: var(--midgrey);
+  color: var(--midblue);
+  font-weight: 900;
   display: flex;
   flex: 1 0 auto;
   justify-content: space-around;
   align-items: stretch;
+}
+
+.shortcut {
+  background-color: var(--white);
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.shortcut button {
+  background-color: var(--midblue);
+  color: var(--white);
+  font-weight: 900;
+  border-style: none;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.new {
+  background-image: url("img/dew_salyasin_pixabay_alpha22.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.returning {
+  background-image: url("img/fields_alpha22.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
