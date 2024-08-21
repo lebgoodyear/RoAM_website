@@ -34,7 +34,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 128px;
+  padding: 8px 116px;
   flex-shrink: 0;
   font-size: 0.8rem;
 }
@@ -69,12 +69,15 @@ nav {
   align-items: center;
 }
 
-nav ul {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: auto;
   display: flex;
+}
+
+nav ul {
+  margin-left: auto;
   gap: 24px;
 }
 
@@ -82,6 +85,7 @@ nav ul {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  colour: var(--midgrey)
 }
 
 .options {
@@ -153,5 +157,44 @@ button {
 .about img {
   max-width: 400px;
   margin-left: 50px; 
+}
+
+/*TOOL*/
+
+#drop_zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed;
+  border-radius: 50%;
+  aspect-ratio: 1.5/1;
+  margin: 3rem 25%;
+  padding: 1rem;
+  font-size: 2rem;
+  color: var(--midblue)
+}
+
+#instructions {
+  margin-bottom: 0;
+}
+
+#drag_drop {
+  color: var(--darkgrey);
+  font-weight: 900;
+}
+
+#tool_bar {
+  border: 2px solid;
+  display: flex;
+  flex: 1 0 auto;
+  margin: 8px 116px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#upload,
+#criteria,
+#success {
+
 }
 
