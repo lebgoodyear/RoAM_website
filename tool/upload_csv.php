@@ -4,7 +4,7 @@
 
 <head>
     <meta charset = "UTF-8">
-    <title>Online Tool</title>
+    <title>Upload csv</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 
