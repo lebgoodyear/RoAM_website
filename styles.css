@@ -104,7 +104,7 @@ nav ul {
   align-items: center;
 }
 
-.shortcut button {
+button {
   background-color: var(--midblue);
   color: var(--white);
   font-weight: 900;
