@@ -32,7 +32,7 @@ button {
   background-color: var(--midblue);
   color: var(--white);
   font-weight: 900;
-  font-size: 1rem;
+  font-size: 1.5rem;
   border-style: none;
   border-radius: 0.5rem;
   padding: 10px;
@@ -55,7 +55,7 @@ footer {
   justify-content: center;
   padding: 8px 116px;
   flex-shrink: 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 /* HEADER */
@@ -66,18 +66,25 @@ header {
   display: flex;
   padding: 8px 116px;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .stamp {
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
 }
 
 #logo {
-  max-width: 60px;
-  /*display: inline-block;*/
+  max-width: 78px;
   border-radius: 0.5rem;
+}
+
+#logo_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title p {
@@ -116,7 +123,7 @@ nav ul {
 
 .shortcut {
   background-color: var(--white);
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -148,7 +155,7 @@ nav ul {
   justify-content: center;
   text-align: center;
   gap: 24px;
-  font-size: 2rem;
+  font-size: 2.8rem;
 }
 
 .about p {
@@ -156,7 +163,7 @@ nav ul {
 }
 
 .about #description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: right;
 }
 
