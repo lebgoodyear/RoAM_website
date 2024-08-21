@@ -28,6 +28,25 @@ body {
   min-height: 100vh;
 }
 
+button {
+  background-color: var(--midblue);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  colour: var(--midgrey)
+}
+
+/* FOOTER */
+
 footer {
   background-color: var(--darkblue);
   color: var(--lightgrey);
@@ -38,6 +57,8 @@ footer {
   flex-shrink: 0;
   font-size: 0.8rem;
 }
+
+/* HEADER */
 
 header {
   background-color: var(--darkblue);
@@ -81,12 +102,7 @@ nav ul {
   gap: 24px;
 }
 
-.main {
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  colour: var(--midgrey)
-}
+/* HOME PAGE */
 
 .options {
   background-color: var(--white);
@@ -106,16 +122,6 @@ nav ul {
   flex: 1;
   justify-content: center;
   align-items: center;
-}
-
-button {
-  background-color: var(--midblue);
-  color: var(--white);
-  font-weight: 900;
-  font-size: 1rem;
-  border-style: none;
-  border-radius: 0.5rem;
-  padding: 10px;
 }
 
 .new {
@@ -164,10 +170,10 @@ button {
 #drop_zone {
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   align-items: center;
   border: 2px dashed;
-  border-radius: 50%;
-  aspect-ratio: 1.5/1;
+  border-radius: 2rem;
   margin: 3rem 25%;
   padding: 1rem;
   font-size: 2rem;
@@ -184,17 +190,27 @@ button {
 }
 
 #tool_bar {
-  border: 2px solid;
+  border: 2px solid var(--darkblue);
   display: flex;
   flex: 1 0 auto;
-  margin: 8px 116px;
+  margin: 16px 116px 0px 116px;
   justify-content: space-around;
   align-items: center;
-}
+  color: var(--darkblue);
+ }
 
-#upload,
-#criteria,
-#success {
+ #upload,
+ #criteria {
+  border-right: 1px solid var(--darkblue);
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 12px 0px;
+ }
 
-}
-
+ #criteria,
+ #success {
+  border-left: 1px solid var(--darkblue);
+  width: calc(100% / 3);
+  text-align: center;
+  padding: 12px 0px;
+ }
