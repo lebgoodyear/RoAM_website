@@ -29,7 +29,9 @@
             </div>
             <div class="returning shortcut">
                 <p>Old hat?</p>
-                <button>Get started</button>
+                <a href="/tool/upload_csv.php">
+                    <button>Get started</button>
+                </a>
             </div>
         </div>
     </div>
