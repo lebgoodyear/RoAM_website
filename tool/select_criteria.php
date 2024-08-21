@@ -16,6 +16,8 @@
 
         <?php include 'tool_bar.php'; ?>
 
+        <?php session_start(); ?>
+
     </div>
 
     <?php require '../footer.php'; ?>

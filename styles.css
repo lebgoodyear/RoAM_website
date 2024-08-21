@@ -204,6 +204,7 @@ nav ul {
   justify-content: space-around;
   align-items: center;
   color: var(--darkblue);
+  font-size: 1.2rem;
  }
 
  #upload,

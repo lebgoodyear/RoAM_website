@@ -27,6 +27,8 @@
         </div>
     </div>
 
+    <?php require 'csv_formatting.php'; ?>
+
     <?php require '../footer.php'; ?>
 
 </body>
