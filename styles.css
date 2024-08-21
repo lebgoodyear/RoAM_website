@@ -1,5 +1,5 @@
 :root {
-  --darkblue: #003b6d;
+  --darkblue: #1F2937;
   --midblue: #3882F6;
   --lightblue: #6699cc;
   --white: #ffffff;
@@ -15,6 +15,11 @@ html, body {
   height: 100%;
   font-size: 1em;
   /*font-family: Helvetica, sans-serif;*/
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
@@ -123,14 +128,25 @@ nav ul {
   color: var(--lightgrey);
   padding: 36px 128px 36px 128px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 48px;
+  gap: 24px;
   font-size: 2rem;
+}
+
+.about p {
+  margin: 0;
+}
+
+.about #description {
+  font-size: 1rem;
+  text-align: right;
 }
 
 .about img {
   max-width: 400px;
   margin-left: 50px; 
 }
+
