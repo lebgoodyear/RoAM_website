@@ -13,11 +13,18 @@
     <?php require '../header.php'; ?>
 
     <div class = "main">
-        <form method="post" enctype="multipart/form-data">
-            <input type="file" name="csv_file">
-            <button type="submit">Go</button>
-        </form>
 
+        <?php include 'tool_bar.php'; ?>
+
+        <div id="drop_zone">
+            <p id = "drag_drop">DRAG AND DROP A CSV FILE</p>
+            <div id="instructions">
+                <form method="post" enctype="multipart/form-data">
+                    <input type="file" name="csv_file" required>
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     <?php require '../footer.php'; ?>
