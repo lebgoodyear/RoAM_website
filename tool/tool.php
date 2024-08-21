@@ -13,6 +13,10 @@
     <?php require '../header.php'; ?>
 
     <div class = "main">
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="csv_file">
+            <button type="submit">Go</button>
+        </form>
 
     </div>
 
