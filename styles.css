@@ -48,6 +48,11 @@ header {
   font-size: 0.9rem;
 }
 
+.stamp {
+  display: flex;
+  align-items: center;
+}
+
 #logo {
   max-width: 60px;
   /*display: inline-block;*/
