@@ -273,13 +273,14 @@ input {
 /* SELECT CRITERIA */
 
 .column_names,
-.criteria {
+#variable_drop {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
   margin: 1rem;
   width: 30%;
   margin-bottom: 3rem;
+  gap: 1rem;
  }
 
  .variables {
@@ -295,17 +296,18 @@ input {
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
-  font-size: 1.2rem;
   background-color: var(--white);
   gap: 1rem;
  }
 
-.column {
+.draggable_variables {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   border-radius: 1rem;
   padding: 0.5rem 0;
   overflow-wrap: normal;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .content{

@@ -6,6 +6,7 @@
     <meta charset = "UTF-8">
     <title>Select criteria</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="select_criteria.js" defer></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
                 <p>Choose criteria by dragging into the <strong>Critera</strong> column</p>
             </div>
 
-            <div class="criteria">
+            <div id="variable_drop">
                 <p class="variables">Criteria</p>
             </div>
         </div>

@@ -18,7 +18,7 @@ if (isset($_SESSION['csv_data'])) {
     echo "<ul>";
     
     foreach ($column_names as $name) {
-        echo "<div class='column'><li>" . htmlspecialchars($name) . "</li></div>";
+        echo "<div class='draggable_variables' id=" . htmlspecialchars($name) . " draggable='true'><li>" . htmlspecialchars($name) . "</li></div>";
     }
 
     echo "</ul>";
