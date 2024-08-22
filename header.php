@@ -15,7 +15,7 @@
         <ul>
             <li>About</li>
             <li>Tutorial</li>
-            <a href = '/tool/upload_csv.php'><li>Online Tool</li></a>
+            <a href = '/tool/upload_csv_front.php'><li>Online Tool</li></a>
             <li>Reference</li>
         </ul>
     </nav>

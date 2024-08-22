@@ -205,6 +205,12 @@ input {
   margin-top: 0;
 }
 
+#drop_zone.hover,
+#drop_zone.hover #drag_drop {
+  color: var(--white);
+  background-color: var(--darkgrey);
+}
+
 #tool_bar {
   border: 2px solid var(--darkblue);
   display: flex;

@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['csv_data'] = $data;
 
             // Redirect to the next page
-            header('Location: select_criteria.php');
+            header('Location: select_criteria_front.php');
             exit;
         }    
         else {
