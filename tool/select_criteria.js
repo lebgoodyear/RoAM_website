@@ -27,6 +27,10 @@ droppableArea.addEventListener('drop', (event) => {
 
 // Event handler for when a draggable element is being dragged over the droppable area
 droppableArea.addEventListener('dragover', (event) => {
+    if ((event.target.tagName.toLowerCase() == 'ul') ||
+        (event.target.id.toLowerCase() == 'fundamental') ||
+        (event.target.id.toLowerCase() == 'additional')) {
     // Prevent the default behavior to allow dropping
-    event.preventDefault();
+        event.preventDefault();
+    }
 });

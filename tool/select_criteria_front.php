@@ -25,7 +25,14 @@
             </div>
 
             <div id="variable_drop">
-                <p class="variables">Criteria</p>
+                <div id="fundamental">
+                    <p class="variables">Fundamental criteria</p>
+                    <ul></ul>
+                </div>
+                <div id="additional">
+                    <p class="variables">Additional criteria</p>
+                    <ul></ul>
+                </div>
             </div>
         </div>
 

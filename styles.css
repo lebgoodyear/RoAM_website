@@ -55,7 +55,8 @@ ul {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  colour: var(--midgrey)
+  colour: var(--midgrey);
+  padding: 0px 116px 0px 116px;
 }
 
 /* FOOTER */
@@ -178,7 +179,8 @@ nav ul {
   border: 2px solid var(--darkblue);
   display: flex;
   flex: 1 0 auto;
-  margin: 26px 116px 12px 116px;
+  margin-top: 26px;
+  margin-bottom: 12px;
   justify-content: space-between;
   align-items: center;
   color: var(--darkblue);
@@ -272,8 +274,7 @@ input {
 
 /* SELECT CRITERIA */
 
-.column_names,
-#variable_drop {
+.column_names {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
@@ -290,11 +291,13 @@ input {
   font-weight: 900;
  }
 
-.column_names ul {
+.column_names ul,
+#fundamental ul,
+#additional ul {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   text-align: center;
   background-color: var(--white);
   gap: 1rem;
@@ -312,6 +315,7 @@ input {
 
 .content{
   display: flex;
+  flex: 1 0 auto;
   gap: 5rem;
 }
 
@@ -325,3 +329,38 @@ input {
   padding: 7rem 2rem;
   text-align: center;
 }
+
+#variable_drop {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin: 1rem;
+  width: 30%;
+  margin-bottom: 3rem;
+  gap: 2rem;
+ }
+
+ #fundamental,
+ #additional {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: auto;
+ }
+
+ #fundamental {
+  min-height: 20rem;
+ }
+
+ #fundamental ul {
+  min-height: 100%;
+ }
+
+ #additional {
+  flex: 1 0 auto;
+ }
+
+ #fundamental ul,
+ #additional ul {
+  padding-bottom: 3.5rem;
+ }
