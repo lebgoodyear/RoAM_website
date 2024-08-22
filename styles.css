@@ -174,17 +174,23 @@ nav ul {
 
 /*TOOL*/
 
+input {
+  font-size: 1.5rem;
+}
+
 #drop_zone {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
   align-items: center;
+  justify-content: center;
   border: 2px dashed;
   border-radius: 2rem;
   margin: 3rem 25%;
   padding: 1rem;
   font-size: 2rem;
-  color: var(--midblue)
+  color: var(--midblue);
+  gap: 28px;
 }
 
 #instructions {
@@ -194,6 +200,9 @@ nav ul {
 #drag_drop {
   color: var(--darkgrey);
   font-weight: 900;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 0;
 }
 
 #tool_bar {
