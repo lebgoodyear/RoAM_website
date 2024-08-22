@@ -4,8 +4,6 @@ ob_start();
 
 session_start();
 
-echo "starting";
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if a file was uploaded
     if (isset($_FILES['csv_file']) && $_FILES['csv_file']['error'] === UPLOAD_ERR_OK) {

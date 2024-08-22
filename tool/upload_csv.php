@@ -19,7 +19,7 @@
         <div id="drop_zone">
             <p id = "drag_drop">DRAG AND DROP A CSV FILE</p>
             <div id="instructions">
-                <form method="post" enctype="multipart/form-data">
+                <form action='csv_formatting.php' method="post" enctype="multipart/form-data">
                     <input type="file" name="csv_file" required>
                     <button type="submit">Go</button>
                 </form>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <?php require 'csv_formatting.php'; ?>
+    <!--php require 'csv_formatting.php'; -->
 
     <?php require '../footer.php'; ?>
 
