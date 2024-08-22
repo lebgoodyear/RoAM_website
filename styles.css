@@ -190,23 +190,25 @@ input {
   padding: 1rem;
   font-size: 2rem;
   color: var(--midblue);
-  gap: 28px;
+  position: relative;
 }
 
 #instructions {
-  margin-bottom: 0;
+  position: absolute;
+  bottom: 2rem;
 }
 
-#drag_drop {
+#drag_drop p {
+  display: flex;
   color: var(--darkgrey);
   font-weight: 900;
   font-size: 3rem;
   text-align: center;
-  margin-top: 0;
+  margin: 0;
 }
 
 #drop_zone.hover,
-#drop_zone.hover #drag_drop {
+#drop_zone.hover #drag_drop p {
   color: var(--white);
   background-color: var(--darkgrey);
 }
