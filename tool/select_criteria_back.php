@@ -13,7 +13,7 @@ if (isset($_SESSION['csv_data'])) {
     
     echo "<div class='column_names'>";
 
-    echo "<p>Data fields</p>";
+    echo "<p class='variables'>Data fields</p>";
 
     echo "<ul>";
     

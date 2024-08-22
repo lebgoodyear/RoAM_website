@@ -16,7 +16,17 @@
 
         <?php include 'tool_bar.php'; ?>
 
-        <?php require 'select_criteria_back.php'; ?>
+        <div class="content">
+            <?php require 'select_criteria_back.php'; ?>
+
+            <div class="drag_gap">
+                <p>Choose criteria by dragging into the <strong>Critera</strong> column</p>
+            </div>
+
+            <div class="criteria">
+                <p class="variables">Criteria</p>
+            </div>
+        </div>
 
     </div>
 
