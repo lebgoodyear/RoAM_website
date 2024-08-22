@@ -12,7 +12,7 @@
 
     <?php require 'header.php'; ?>
 
-    <div class="main">
+    <div class="home_main">
         <div class="about">
             <!--<strong>Welcome to the online DARe tool</strong>-->
             <p> 
