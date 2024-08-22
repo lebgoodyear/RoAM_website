@@ -13,9 +13,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Check if the uploaded file is a CSV file
         if ($file_extension === 'csv') {
+            
+            // Store csv file as array
+            $data = array_map('str_getcsv', file($csv_file));
 
             // Save the data to the session
-            $_SESSION['csv_data'] = $csv_file;
+            $_SESSION['csv_data'] = $data;
 
             // Redirect to the next page
             header('Location: select_criteria.php');
