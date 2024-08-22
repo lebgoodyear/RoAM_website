@@ -1,3 +1,8 @@
+// Add css into tool progress bar to show which stage we are at
+const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
+addCSS("#criteria {background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);}") 
+
+
 // Get references to my draggable elements and the droppable area
 const draggableElements = Array.from(document.getElementsByClassName('draggable_variables'));
 const droppableArea1 = document.getElementById('variable_drop');

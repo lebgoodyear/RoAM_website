@@ -176,6 +176,7 @@ nav ul {
 /* TOOL */
 
 #tool_bar_list {
+  background: var(--lightgrey);  
   border: 2px solid var(--darkblue);
   display: flex;
   flex: 1 0 auto;
@@ -208,27 +209,12 @@ nav ul {
   height: 3rem;
 }
 
-#upload {
-  background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);
-}
-
-#upload p,
-#criteria p,
-#success p {
-  background: var(--lightgrey);
+#tool_bar_list li p {
+  background: var(--lightgrey);  
   width: max-content;
   margin: 0 auto;
   padding: 0.5rem;
   text-align: center;
-}
-
-#criteria p,
-#success p {
-  background: var(--white);
-  width: max-content;
-  margin: 0 auto;
-  text-align: center;
-  padding: 0.5rem;
 }
 
 /* CSV UPLOAD */
