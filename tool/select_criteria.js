@@ -1,6 +1,7 @@
 // Get references to my draggable elements and the droppable area
 const draggableElements = Array.from(document.getElementsByClassName('draggable_variables'));
-const droppableArea = document.getElementById('variable_drop');
+const droppableArea1 = document.getElementById('variable_drop');
+const droppableArea2 = document.getElementById('column_names');
 
 // Set up event handler for when dropping starts
 draggableElements.forEach(element => {
@@ -11,7 +12,22 @@ draggableElements.forEach(element => {
 });
 
 // Set up event handler for when dropping occurs
-droppableArea.addEventListener('drop', (event) => {
+droppableArea1.addEventListener('drop', (event) => {
+    // Prevent default behaviour or dropping can't take place
+    event.preventDefault();
+
+    // Get the data from the drag event above
+    const data = event.dataTransfer.getData('text/plain');
+
+    // Based on the data, find the draggable element
+    const draggableElement = document.getElementById(data);
+
+    // Put the draggable element into the droppable area
+    event.target.appendChild(draggableElement);
+});
+
+// Set up event handler for when dropping occurs
+droppableArea2.addEventListener('drop', (event) => {
     // Prevent default behaviour or dropping can't take place
     event.preventDefault();
 
@@ -26,10 +42,18 @@ droppableArea.addEventListener('drop', (event) => {
 });
 
 // Event handler for when a draggable element is being dragged over the droppable area
-droppableArea.addEventListener('dragover', (event) => {
+droppableArea1.addEventListener('dragover', (event) => {
     if ((event.target.tagName.toLowerCase() == 'ul') ||
         (event.target.id.toLowerCase() == 'fundamental') ||
         (event.target.id.toLowerCase() == 'additional')) {
+    // Prevent the default behavior to allow dropping
+        event.preventDefault();
+    }
+});
+
+// Event handler for when a draggable element is being dragged over the droppable area
+droppableArea2.addEventListener('dragover', (event) => {
+    if (event.target.tagName.toLowerCase() == 'ul') {
     // Prevent the default behavior to allow dropping
         event.preventDefault();
     }

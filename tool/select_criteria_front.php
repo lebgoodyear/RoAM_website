@@ -17,7 +17,7 @@
 
         <?php include 'tool_bar.php'; ?>
 
-        <div class="content">
+        <div id="content">
             <?php require 'select_criteria_back.php'; ?>
 
             <div class="drag_gap">

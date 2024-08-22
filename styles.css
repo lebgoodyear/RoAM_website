@@ -274,7 +274,20 @@ input {
 
 /* SELECT CRITERIA */
 
-.column_names {
+#content {
+  display: flex;
+  flex: 1 0 auto;
+  gap: 5rem;
+}
+
+.variables {
+  color: var(--darkblue);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+ }
+
+#column_names {
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
@@ -284,14 +297,7 @@ input {
   gap: 1rem;
  }
 
- .variables {
-  color: var(--darkblue);
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 900;
- }
-
-.column_names ul,
+#column_names ul,
 #fundamental ul,
 #additional ul {
   display: flex;
@@ -311,12 +317,6 @@ input {
   overflow-wrap: normal;
   font-size: 1.2rem;
   text-align: center;
-}
-
-.content{
-  display: flex;
-  flex: 1 0 auto;
-  gap: 5rem;
 }
 
 .drag_gap {
@@ -352,12 +352,12 @@ input {
   min-height: 20rem;
  }
 
- #fundamental ul {
-  min-height: 100%;
- }
-
  #additional {
   flex: 1 0 auto;
+ }
+
+ #fundamental ul {
+  min-height: 100%;
  }
 
  #fundamental ul,

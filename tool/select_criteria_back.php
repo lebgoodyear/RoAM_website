@@ -10,8 +10,10 @@ if (isset($_SESSION['csv_data'])) {
     if ($column_names[0] == "") {
         array_splice($column_names, 0, 1);
     }
+
+    $column_names = str_replace(' ', '_', $column_names);
     
-    echo "<div class='column_names'>";
+    echo "<div id='column_names'>";
 
     echo "<p class='variables'>Data fields</p>";
 
