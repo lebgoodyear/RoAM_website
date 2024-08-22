@@ -36,6 +36,7 @@ button {
   border-style: none;
   border-radius: 0.5rem;
   padding: 10px;
+  cursor: pointer;
 }
 
 nav {
@@ -221,6 +222,7 @@ nav ul {
 
 input {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 #drop_zone {
@@ -303,6 +305,7 @@ input {
   overflow-wrap: normal;
   font-size: 1.2rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .drag_gap {
