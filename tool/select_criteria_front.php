@@ -16,7 +16,7 @@
 
         <?php include 'tool_bar.php'; ?>
 
-        <?php session_start(); ?>
+        <?php require 'select_criteria_back.php'; ?>
 
     </div>
 

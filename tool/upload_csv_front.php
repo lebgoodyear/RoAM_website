@@ -22,7 +22,7 @@
                 <p>DRAG AND DROP A CSV FILE</p>
             </div>    
             <div id="instructions">
-                <form action='csv_formatting.php' method="post" enctype="multipart/form-data">
+                <form action='upload_csv_back.php' method="post" enctype="multipart/form-data">
                     <input type="file" name="csv_file" id="csv_file" required>
                     <button type="submit">Go</button>
                 </form>

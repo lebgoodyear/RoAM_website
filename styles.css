@@ -38,6 +38,19 @@ button {
   padding: 10px;
 }
 
+nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 .main {
   flex: 1 0 auto;
   display: flex;
@@ -89,19 +102,6 @@ header {
 
 .title p {
   margin: 0 0 0 1rem;
-}
-
-nav {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
 }
 
 nav ul {
@@ -222,20 +222,52 @@ input {
   align-items: center;
   color: var(--darkblue);
   font-size: 1.2rem;
- }
+}
 
- #upload,
- #criteria {
+#upload,
+#criteria {
   border-right: 1px solid var(--darkblue);
   width: calc(100% / 3);
   text-align: center;
   padding: 12px 0px;
- }
+}
 
- #criteria,
- #success {
+#criteria,
+#success {
   border-left: 1px solid var(--darkblue);
   width: calc(100% / 3);
   text-align: center;
   padding: 12px 0px;
+}
+
+.column_names {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin: 1rem;
+  width: 30%;
+ }
+
+ .column_names p {
+  color: var(--darkblue);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+ }
+
+.column_names ul {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: var(--white);
+ }
+
+.column {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  border-radius: 1rem;
+  padding: 0.5rem 0;
  }

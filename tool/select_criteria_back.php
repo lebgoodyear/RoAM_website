@@ -2,11 +2,29 @@
 
 session_start();
 
-if (isset($_SESSION['data'])) {
-    $data = $_SESSION['data'];
-} else {
-    header('Location: upload_csv_front.php')
-    exit;
+if (isset($_SESSION['csv_data'])) {
+    $data = $_SESSION['csv_data'];
+
+    $column_names = $data[0];
+
+    if ($column_names[0] == "") {
+        array_splice($column_names, 0, 1);
+    }
+    
+    echo "<div class='column_names'>";
+
+    echo "<p>Data fields</p>";
+
+    echo "<ul>";
+    
+    foreach ($column_names as $name) {
+        echo "<div class='column'><li>" . htmlspecialchars($name) . "</li></div>";
+    }
+
+    echo "</ul>";
+
+    echo "</div>";
+
 }
 
 ?>
