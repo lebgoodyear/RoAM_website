@@ -1,7 +1,13 @@
-<div>
-    <ul id="tool_bar">
-        <li id = "upload">Upload csv</li>
-        <li id = "criteria">Select criteria</li>
-        <li id = "success">Calculate success</li>
+<div id="tool_bar">
+    <ul id="tool_bar_list">
+        <li id = "upload">
+            <p>Upload csv</p>
+        </li>
+        <li id = "criteria">
+            <p>Select criteria</p>
+        </li>
+        <li id = "success">
+            <p>Calculate success</p>
+        </li>
     </ul>
 </div>

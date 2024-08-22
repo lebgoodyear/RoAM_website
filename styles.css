@@ -172,7 +172,64 @@ nav ul {
   margin-left: 50px; 
 }
 
-/*TOOL*/
+/* TOOL */
+
+#tool_bar_list {
+  border: 2px solid var(--darkblue);
+  display: flex;
+  flex: 1 0 auto;
+  margin: 26px 116px 12px 116px;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--darkblue);
+  font-size: 1.2rem;
+  height: 3rem;
+}
+
+#upload,
+#criteria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--darkblue);
+  width: calc(100% / 3);
+  height: 3rem;
+}
+
+#criteria,
+#success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--darkblue);
+  width: calc(100% / 3);
+  height: 3rem;
+}
+
+#upload {
+  background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);
+}
+
+#upload p,
+#criteria p,
+#success p {
+  background: var(--lightgrey);
+  width: max-content;
+  margin: 0 auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#criteria p,
+#success p {
+  background: var(--white);
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* CSV UPLOAD */
 
 input {
   font-size: 1.5rem;
@@ -213,32 +270,7 @@ input {
   background-color: var(--darkgrey);
 }
 
-#tool_bar {
-  border: 2px solid var(--darkblue);
-  display: flex;
-  flex: 1 0 auto;
-  margin: 16px 116px 0px 116px;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--darkblue);
-  font-size: 1.2rem;
-}
-
-#upload,
-#criteria {
-  border-right: 1px solid var(--darkblue);
-  width: calc(100% / 3);
-  text-align: center;
-  padding: 12px 0px;
-}
-
-#criteria,
-#success {
-  border-left: 1px solid var(--darkblue);
-  width: calc(100% / 3);
-  text-align: center;
-  padding: 12px 0px;
-}
+/* SELECT CRITERIA */
 
 .column_names,
 .criteria {
