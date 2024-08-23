@@ -17,6 +17,15 @@
 
         <?php include 'tool_bar.php'; ?>
 
+        <div id="nav_buttons">
+            <div id="back_button">
+                <a href="./upload_csv_front.php"><button>Back</button></a>
+            </div>
+            <div id="next_button">
+                <a href="./calculate_utility_front.php"><button>Next</button></a>
+            </div>
+        </div>
+
         <div id="content">
             <?php require 'select_criteria_back.php'; ?>
 

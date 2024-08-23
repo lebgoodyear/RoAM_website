@@ -225,6 +225,19 @@ nav ul {
   text-align: center;
 }
 
+#nav_buttons {
+  display: flex;
+  padding: 0.5rem 2rem;
+}
+
+#next_button{
+  margin-left: auto;
+}
+
+#right_button{
+  margin-left: auto;
+}
+
 /* CSV UPLOAD */
 
 input {

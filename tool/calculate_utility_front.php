@@ -16,6 +16,12 @@
 
         <?php include 'tool_bar.php'; ?>
 
+    <div id="nav_buttons">
+        <div id="back_button">
+            <a href="./select_criteria_front.php"><button>Back</button></a>
+        </div>
+    </div>
+
     </div>
 
     <?php require '../footer.php'; ?>
