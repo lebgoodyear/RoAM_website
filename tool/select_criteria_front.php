@@ -22,7 +22,7 @@
                 <a href="./upload_csv_front.php"><button>Back</button></a>
             </div>
             <div id="next_button">
-                <a href="./calculate_utility_front.php"><button>Next</button></a>
+                <a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>
             </div>
         </div>
 
@@ -34,13 +34,13 @@
             </div>
 
             <div id="variable_drop">
-                <div id="fundamental">
+                <div id="fundamental_drop">
                     <p class="variables">Fundamental criteria</p>
-                    <ul></ul>
+                    <ul id="fundamental"></ul>
                 </div>
-                <div id="additional">
+                <div id="additional_drop">
                     <p class="variables">Additional criteria</p>
-                    <ul></ul>
+                    <ul id="additional"></ul>
                 </div>
             </div>
         </div>
