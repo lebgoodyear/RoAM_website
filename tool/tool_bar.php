@@ -6,8 +6,8 @@
         <li id = "criteria">
             <p>Select criteria</p>
         </li>
-        <li id = "success">
-            <p>Calculate success</p>
+        <li id = "utility">
+            <p>Calculate utility</p>
         </li>
     </ul>
 </div>

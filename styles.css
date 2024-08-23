@@ -208,7 +208,7 @@ nav ul {
 }
 
 #criteria,
-#success {
+#utility {
   display: flex;
   justify-content: center;
   align-items: center;
