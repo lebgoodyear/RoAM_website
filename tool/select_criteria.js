@@ -102,7 +102,8 @@ droppableArea2.addEventListener('dragover', (event) => {
 const nextButton = document.getElementById("go_to_utility");
 
 nextButton.addEventListener("click", (event) => {
-    const criteriaArray = [fundamentalCriteria, additionalCriteria]
-    document.getElementById("selected_criteria_array").value = criteriaArray;
-    document.getElementById("store_criteria").submit()
+    const criteriaArray = [fundamentalCriteria, additionalCriteria];
+    const jsonArray = JSON.stringify(criteriaArray);
+    document.getElementById("selected_criteria_array").value = jsonArray;
+    document.getElementById("store_criteria").submit();
 })
