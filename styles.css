@@ -355,29 +355,89 @@ input {
   width: 30%;
   margin-bottom: 3rem;
   gap: 2rem;
- }
+}
 
- #fundamental_drop,
- #additional_drop {
+#fundamental_drop,
+#additional_drop {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   height: auto;
- }
+}
 
- #fundamental_drop {
+#fundamental_drop {
   min-height: 20rem;
- }
+}
 
- #additional_drop {
+#additional_drop {
   flex: 1 0 auto;
- }
+}
 
- #fundamental_drop ul{
+#fundamental_drop ul{
   min-height: 100%;
- }
+}
 
- #fundamental_drop ul,
- #additional_drop ul {
+#fundamental_drop ul,
+#additional_drop ul {
   padding-bottom: 3.5rem;
- }
+}
+
+/* CALCULATE UTILITY */
+
+#main_utility {
+  display: flex;
+  flex-direction: row;
+}
+
+#work_space {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  background-color: var(--midblue);
+  color: var(--lightgrey);
+  border-radius: 2rem;
+  margin: 5rem 0;
+  padding: 2rem;
+}
+
+#criterion_selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.final_criteria > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  color: var(--darkblue);
+  font-weight: 900;
+  text-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+#plot_space {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+#user_inputs {
+  background-color: var(--lightgrey);
+  color: var(--midblue);
+  border-radius: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+#user_inputs > button {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}

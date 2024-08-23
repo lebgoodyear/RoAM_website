@@ -97,10 +97,12 @@ droppableArea2.addEventListener('dragover', (event) => {
 });
 
 
+// STORE ARRAYS
 
-
+// Only store once the 'next' button is clicked
 const nextButton = document.getElementById("go_to_utility");
 
+// Store and send to html form for php processing
 nextButton.addEventListener("click", (event) => {
     const criteriaArray = [fundamentalCriteria, additionalCriteria];
     const jsonArray = JSON.stringify(criteriaArray);

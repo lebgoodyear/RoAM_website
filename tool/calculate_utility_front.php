@@ -27,9 +27,30 @@
     </div>
 
 
-    <div class = "main">
+    <div class = "main" id="main_utility">
 
-        <?php require 'calculate_utility_back.php'; ?>
+        <div id="work_space">
+
+            <?php require 'calculate_utility_back.php'; ?>
+
+            <div id="user_inputs">
+
+                <div id="weights">
+                    <p>Weights</p>
+
+                    <form id="add_weights">
+                    </form> 
+                    
+                </div>
+
+                <button>Calculate</button>
+            </div>
+
+        </div>
+
+        <div id="plot_space">
+            <p>Utility distribution</p>
+        </div>
 
     </div>
 
