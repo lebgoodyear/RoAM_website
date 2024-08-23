@@ -13,9 +13,21 @@
 
     <?php require '../header.php'; ?>
 
-    <div class = "main">
+    <div id="progress">
+        
+        <div id="back_button" hidden="true">
+            <a href="./upload_csv_front.php"><button>Back</button></a>
+        </div>
 
         <?php include 'tool_bar.php'; ?>
+
+        <div id="next_button" hidden="true">
+            <a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>
+        </div>
+
+    </div>
+
+    <div class = "main">
 
         <div id="drop_zone">
             <div id = "drag_drop">

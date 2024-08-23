@@ -7,6 +7,7 @@
   --midgrey: #BDBDBD;
   --darkgrey:  #676767;
   --black: #000000;
+  --const_padding: 0px 116px 0px 116px;
 }
 
 html, body {
@@ -64,7 +65,7 @@ ul {
   display: flex;
   flex-direction: column;
   colour: var(--midgrey);
-  padding: 0px 116px 0px 116px;
+  padding: var(--const_padding);
 }
 
 /* FOOTER */
@@ -184,12 +185,10 @@ nav ul {
 /* TOOL */
 
 #tool_bar_list {
-  background: var(--lightgrey);  
+  background: var(--midgrey);  
   border: 2px solid var(--darkblue);
   display: flex;
   flex: 1 0 auto;
-  margin-top: 26px;
-  margin-bottom: 12px;
   justify-content: space-between;
   align-items: center;
   color: var(--darkblue);
@@ -202,7 +201,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid var(--darkblue);
+  border-right: 2px solid var(--darkblue);
   width: calc(100% / 3);
   height: 3rem;
 }
@@ -212,30 +211,39 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid var(--darkblue);
+  border-left: 2px solid var(--darkblue);
   width: calc(100% / 3);
   height: 3rem;
 }
 
 #tool_bar_list li p {
-  background: var(--lightgrey);  
+  background: var(--midgrey);  
   width: max-content;
   margin: 0 auto;
   padding: 0.5rem;
   text-align: center;
 }
 
-#nav_buttons {
+#progress {
+  background-color: var(--darkblue);
+  padding: var(--const_padding);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#tool_bar {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 70%;
+}
+
+#next_button button,
+#back_button button {
   padding: 0.5rem 2rem;
-}
-
-#next_button{
-  margin-left: auto;
-}
-
-#right_button{
-  margin-left: auto;
 }
 
 /* CSV UPLOAD */
