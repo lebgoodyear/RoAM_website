@@ -11,7 +11,8 @@ if (isset($_SESSION['csv_data'])) {
         array_splice($column_names, 0, 1);
     }
 
-    $column_names = str_replace(' ', '_', $column_names);
+    // Save the column names to the session
+    $_SESSION['data_fields'] = $data;
     
     echo "<div id='column_names'>";
 
@@ -20,7 +21,8 @@ if (isset($_SESSION['csv_data'])) {
     echo "<ul>";
     
     foreach ($column_names as $name) {
-        echo "<div class='draggable_variables' id=" . htmlspecialchars($name) . " draggable='true'><li>" . htmlspecialchars($name) . "</li></div>";
+        $name_no_spaces = str_replace(' ', '_', $name);
+        echo "<div class='draggable_variables' id=" . htmlspecialchars($name_no_spaces) . " data-name="  . htmlspecialchars($name) . " draggable='true'><li>" . htmlspecialchars($name) . "</li></div>";
     }
 
     echo "</ul>";
