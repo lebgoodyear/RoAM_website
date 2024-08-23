@@ -13,6 +13,8 @@ addCSS("#tool_bar_list #criteria p {background: var(--lightgrey)};")
 const draggableElements = Array.from(document.getElementsByClassName('draggable_variables'));
 const droppableArea1 = document.getElementById('variable_drop');
 const droppableArea2 = document.getElementById('column_names');
+const appendableAreaFundamental = document.getElementById('fundamental')
+const appendableAreaAdditional = document.getElementById('additional')
 
 // Set up arrays to store fundamental and additional criteria
 const fundamentalCriteria = []
@@ -37,16 +39,17 @@ droppableArea1.addEventListener('drop', (event) => {
     // Based on the data, find the draggable element
     const draggableElement = document.getElementById(data);
 
-    // Put the draggable element into the droppable area
-    event.target.appendChild(draggableElement);
-
     // if draggable element is moved to fundamental list, add to fundamental array
     if (event.target.id.toLowerCase() == 'fundamental') {
         fundamentalCriteria.push(draggableElement.id);
+        // Put the draggable element into the droppable area
+        appendableAreaFundamental.appendChild(draggableElement);
     }
    // if draggable element is moved to additional list, add to additional array
     if (event.target.id.toLowerCase() == 'additional') {
         additionalCriteria.push(draggableElement.id);
+        // Put the draggable element into the droppable area
+        appendableAreaAdditional.appendChild(draggableElement);
     }
 });
 
