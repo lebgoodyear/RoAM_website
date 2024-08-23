@@ -391,7 +391,7 @@ input {
 
 #work_space {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex: 1 0 auto;
   background-color: var(--midblue);
   color: var(--lightgrey);
@@ -429,15 +429,25 @@ input {
   background-color: var(--lightgrey);
   color: var(--midblue);
   border-radius: 2rem;
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
+  text-align: right;
+  padding: 2rem 2rem;
+  gap: 2rem;
 }
 
 #user_inputs > button {
-  margin-bottom: 2rem;
   font-size: 1.5rem;
+  margin-left: auto;
+}
+
+input {
+  vertical-align: middle;
+}
+
+.slider{
+  margin: 0.75rem 2rem;
 }
