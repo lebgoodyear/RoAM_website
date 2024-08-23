@@ -32,16 +32,16 @@
             <?php require 'select_criteria_back.php'; ?>
 
             <div class="drag_gap">
-                <p>Choose criteria by dragging into the <strong>Critera</strong> column</p>
+                <p>Choose criteria by dragging into one of the <strong>Criteria</strong> columns</p>
             </div>
 
             <div id="variable_drop">
                 <div id="fundamental_drop">
-                    <p class="variables">Fundamental criteria</p>
+                    <p class="variables">FUNDAMENTAL CRITERIA</p>
                     <ul id="fundamental"></ul>
                 </div>
                 <div id="additional_drop">
-                    <p class="variables">Additional criteria</p>
+                    <p class="variables">ADDITIONAL CRITERIA</p>
                     <ul id="additional"></ul>
                 </div>
             </div>
