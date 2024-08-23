@@ -95,3 +95,14 @@ droppableArea2.addEventListener('dragover', (event) => {
         event.preventDefault();
     }
 });
+
+
+
+
+const nextButton = document.getElementById("go_to_utility");
+
+nextButton.addEventListener("click", (event) => {
+    const criteriaArray = [fundamentalCriteria, additionalCriteria]
+    document.getElementById("selected_criteria_array").value = criteriaArray;
+    document.getElementById("store_criteria").submit()
+})

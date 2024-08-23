@@ -21,7 +21,12 @@
         <?php include 'tool_bar.php'; ?>
 
         <div id="next_button">
-            <a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>
+            <form id="store_criteria" action="store_criteria_back.php" method="post">
+                <input type="hidden" id="selected_criteria_array" name="criteriaArray">
+                <button type="submit" id="go_to_utility">Next</button>
+            </form>
+
+            <!--<a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>-->
         </div>
 
     </div>
