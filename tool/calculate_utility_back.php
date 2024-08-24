@@ -36,7 +36,7 @@ if (isset($_SESSION['jsonArray'])) {
     
     foreach ($additional as $name) {
         $name_no_spaces = str_replace(' ', '_', $name);
-        echo "<div id=" . htmlspecialchars($name_no_spaces) . " class='additional_variable' data-name="  . htmlspecialchars($name) . "><li>" . htmlspecialchars($name) . "</li></div>";
+        echo "<div hidden='true' id=" . htmlspecialchars($name_no_spaces) . " class='additional_variable' data-name="  . htmlspecialchars($name) . "><li>" . htmlspecialchars($name) . "</li></div>";
     }
 
     echo "</ul>";
