@@ -225,7 +225,6 @@ nav ul {
 }
 
 #tool_bar_list li p {
-  background: var(--midgrey);  
   width: max-content;
   margin: 0 auto;
   padding: 0.5rem;
@@ -395,6 +394,7 @@ input {
 }
 
 
+
 /* CALCULATE UTILITY */
 
 #main_utility {
@@ -463,4 +463,13 @@ input {
 
 .slider{
   margin: 0.75rem 2rem;
+}
+
+#sumbox{
+  text-align: end;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  gap: 1rem;
 }

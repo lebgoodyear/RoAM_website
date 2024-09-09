@@ -8,7 +8,6 @@ addCSS("#tool_bar_list #utility p {background: var(--lightgrey)};")
 
 
 
-
 // GENERATE FORM FOR WEIGHTS
 
 const fundamentalArray = Array.from(document.getElementsByClassName('fundamental_variable'));
@@ -47,12 +46,13 @@ additionalCriteriaLabels.forEach(criterion => {
     inputSlider.classList.add(criterion);
     inputSlider.classList.add("slider");
     inputSlider.id = "s_" + criterion;
-    inputSlider.type = "range"; // Adjust input type as needed
+    inputSlider.type = "range";
     inputSlider.min = 0;
     inputSlider.max = 1;
     inputSlider.value = 0;
     inputSlider.step = 0.05;
     inputSlider.addEventListener("input", function() {updateTextBox(criterion)});
+    inputSlider.addEventListener("input", function() {updateSumCheckbox()});
 
     const inputNumberTextBox = document.createElement("input");
     inputNumberTextBox.classList.add(criterion);
@@ -64,9 +64,40 @@ additionalCriteriaLabels.forEach(criterion => {
     inputNumberTextBox.value = 0;
     inputNumberTextBox.step = 0.05;
     inputNumberTextBox.addEventListener("input", function() {updateSlider(criterion)});
+    inputNumberTextBox.addEventListener("input", function() {updateSumCheckbox()});
 
     addWeightsForm.appendChild(labelElement);
     addWeightsForm.appendChild(inputSlider);
     addWeightsForm.appendChild(inputNumberTextBox);
     addWeightsForm.appendChild(document.createElement("br")); // Add a line break for spacing
+});
+
+
+
+// GENERATE SUM CHECK BOX FOR WEIGHTS
+
+const weightInputs = document.getElementsByClassName("number_text_box");
+
+function updateSumCheckbox() {
+    let sum = 0;
+
+    for (let i = 0; i < weightInputs.length; i++) {
+        sum += parseFloat(weightInputs[i].value);
+    };
+
+    sumContent.textContent = sum;
+};
+
+
+const sumCheckbox = document.getElementById('sum');
+
+const calculateButton = document.getElementById('calculate');
+
+const sumContent = sumCheckbox.appendChild(document.createElement("p"));
+sumContent.textContent = 0;
+
+calculateButton.addEventListener('click', function() {
+    if (sumContent.textContent !== "1") {
+        window.alert("Weights must sum up to 1");
+    } else {window.alert("Let's go!")}
 });

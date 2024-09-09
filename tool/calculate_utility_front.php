@@ -40,10 +40,17 @@
 
                     <form id="add_weights">
                     </form> 
-                    
+
                 </div>
 
-                <button>Calculate</button>
+                <div id="sumbox">
+                    <p>Checksum</p>
+                    <div id="sum">
+
+                    </div>
+                </div>
+
+                <button id="calculate">Calculate</button>
             </div>
 
         </div>
