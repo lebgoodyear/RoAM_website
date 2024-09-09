@@ -68,6 +68,8 @@ ul {
   padding: var(--const_padding);
 }
 
+
+
 /* FOOTER */
 
 footer {
@@ -80,6 +82,8 @@ footer {
   flex-shrink: 0;
   font-size: 1rem;
 }
+
+
 
 /* HEADER */
 
@@ -118,6 +122,8 @@ nav ul {
   margin-left: auto;
   gap: 24px;
 }
+
+
 
 /* HOME PAGE */
 
@@ -181,6 +187,8 @@ nav ul {
   max-width: 400px;
   margin-left: 50px; 
 }
+
+
 
 /* TOOL */
 
@@ -246,6 +254,8 @@ nav ul {
   padding: 0.5rem 2rem;
 }
 
+
+
 /* CSV UPLOAD */
 
 input {
@@ -287,6 +297,8 @@ input {
   color: var(--white);
   background-color: var(--darkgrey);
 }
+
+
 
 /* SELECT CRITERIA */
 
@@ -381,6 +393,7 @@ input {
 #additional_drop ul {
   padding-bottom: 3.5rem;
 }
+
 
 /* CALCULATE UTILITY */
 
