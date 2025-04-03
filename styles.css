@@ -314,6 +314,15 @@ input {
   font-weight: 900;
  }
 
+.criteria {
+  position: sticky;
+  top: 0;
+  background-color: var(--white); /* Match your page background */
+  padding: 10px 0;
+  z-index: 10; /* Ensures it stays above other content */
+  margin: 0; /* Remove default margins */
+}
+
 #column_names {
   display: flex;
   flex: 1 0 auto;
@@ -376,10 +385,7 @@ input {
   gap: 1rem;
   height: auto;
   width: 50%;
-}
-
-#fundamental_drop ul{
-  min-height: 100%;
+  position: relative;
 }
 
 #fundamental_drop ul,
