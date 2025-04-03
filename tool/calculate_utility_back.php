@@ -15,7 +15,7 @@ if (isset($_SESSION['jsonArray'])) {
 
     echo "<div class='final_criteria'>";
 
-    echo "<p>Fundamental criteria</p>";
+    echo "<p>FUNDAMENTAL CRITERIA</p>";
 
     echo "<ul id='fundamental_variables'>";
     
@@ -30,7 +30,7 @@ if (isset($_SESSION['jsonArray'])) {
 
     echo "<div class='final_criteria'>";
 
-    echo "<p>Additional criteria</p>";
+    echo "<p>ADDITIONAL CRITERIA</p>";
 
     echo "<ul id='additional_variables'>";
     

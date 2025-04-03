@@ -400,6 +400,7 @@ input {
 #main_utility {
   display: flex;
   flex-direction: row;
+  font-size: 1rem;
 }
 
 #work_space {
@@ -411,13 +412,17 @@ input {
   border-radius: 2rem;
   margin: 5rem 0;
   padding: 2rem;
+  width: 30%;
 }
 
 #criterion_selection {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+}
+
+.final_criteria {
+  font-weight: 900;
 }
 
 .final_criteria > ul {
@@ -425,35 +430,42 @@ input {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1rem;
   color: var(--darkblue);
   font-weight: 900;
   text-wrap: wrap;
   flex-wrap: wrap;
 }
 
+.fundamental_variable {
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  flex: 1 0 auto;
+}
+
 #plot_space {
-  width: 60%;
   display: flex;
   justify-content: center;
+  width: 70%;
 }
 
 #user_inputs {
   background-color: var(--lightgrey);
-  color: var(--midblue);
+  color: var(--darkblue);
   border-radius: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
   text-align: right;
   padding: 2rem 2rem;
   gap: 2rem;
 }
 
 #user_inputs > button {
-  font-size: 1.5rem;
   margin-left: auto;
 }
 
