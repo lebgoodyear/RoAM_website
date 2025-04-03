@@ -96,13 +96,25 @@ const calculateButton = document.getElementById('calculate');
 const sumContent = sumCheckbox.appendChild(document.createElement("p"));
 sumContent.textContent = 0;
 
+let additionalWeights = [];
+let weightsArray = [];
+let jsonWeightsArray = JSON.stringify([])
 calculateButton.addEventListener('click', function() {
     if (sumContent.textContent !== "1") {
         window.alert("Weights must sum up to 1");
     } else {
         window.alert("Let's go!");
-        const weightsArray = [additionalCriteriaLabels, weightInputs];
-        const jsonWeightsArray = JSON.stringify(weightsArray);
+        additionalWeights = [];
+        for (let i = 0; i < weightInputs.length; i++) {
+            additionalWeights[i] = weightInputs[i].valueAsNumber;
+        };
+        weightsArray = [additionalCriteriaLabels, additionalWeights];
+        jsonWeightsArray = JSON.stringify(weightsArray);
         document.getElementById("selected_criteria_array").value = jsonWeightsArray;
     }
 });
+
+
+
+// CALCULATE UTILITY
+
