@@ -40,18 +40,16 @@
                 <p>Choose criteria by dragging into one of the <strong>Criteria</strong> columns</p>
             </div>
 
-            <div id="variable_drop_wrapper">
-                <div id="variable_drop">
-                    <div id="fundamental_drop">
-                        <p class="variables criteria">FUNDAMENTAL CRITERIA</p>
-                        <ul id="fundamental"></ul>
-                    </div>
-                    <div id="additional_drop">
-                        <p class="variables criteria">ADDITIONAL CRITERIA</p>
-                        <ul id="additional"></ul>
-                    </div>
+            <div id="variable_drop">
+                <div id="fundamental_drop">
+                    <p class="variables criteria">FUNDAMENTAL CRITERIA</p>
+                    <ul id="fundamental"></ul>
                 </div>
-             </div>
+                <div id="additional_drop">
+                    <p class="variables criteria">ADDITIONAL CRITERIA</p>
+                    <ul id="additional"></ul>
+                </div>
+            </div>
         </div>
 
     </div>
