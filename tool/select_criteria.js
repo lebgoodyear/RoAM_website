@@ -28,7 +28,7 @@ draggableElements.forEach(element => {
     })
 });
 
-// Set up event handler for when dropping occurs
+// Set up event handler for when dropping occurs into criteria drop zone
 droppableArea1.addEventListener('drop', (event) => {
     // Prevent default behaviour or dropping can't take place
     event.preventDefault();
@@ -39,7 +39,45 @@ droppableArea1.addEventListener('drop', (event) => {
     // Based on the data, find the draggable element
     const draggableElement = document.getElementById(data);
 
-    // if draggable element is moved to fundamental list, add to fundamental array
+    // Find the target drop area and determine where to insert the element
+    let targetContainer;
+    if (event.target.id.toLowerCase() === 'fundamental') {
+        targetContainer = appendableAreaFundamental;
+        fundamentalCriteria.push(draggableElement.id);
+    } else if (event.target.id.toLowerCase() === 'additional') {
+        targetContainer = appendableAreaAdditional;
+        additionalCriteria.push(draggableElement.id);
+    } else if (event.target.closest('#fundamental')) {
+        targetContainer = appendableAreaFundamental;
+        fundamentalCriteria.push(draggableElement.id);
+    } else if (event.target.closest('#additional')) {
+        targetContainer = appendableAreaAdditional;
+        additionalCriteria.push(draggableElement.id);
+    }
+
+    if (targetContainer) {
+        // Find the closest element based on mouse position
+        const mouseY = event.clientY;
+        const children = Array.from(targetContainer.children);
+        
+        // Find the element to insert before
+        let insertBeforeElement = null;
+        
+        for (const child of children) {
+          const rect = child.getBoundingClientRect();
+          const childMiddleY = rect.top + rect.height / 2;
+          
+          if (mouseY < childMiddleY) {
+            insertBeforeElement = child;
+            break;
+          }
+        }
+        
+        // Insert the dragged element at the appropriate position
+        targetContainer.insertBefore(draggableElement, insertBeforeElement);
+      }
+
+    /*// if draggable element is moved to fundamental list, add to fundamental array
     if (event.target.id.toLowerCase() == 'fundamental') {
         fundamentalCriteria.push(draggableElement.id);
         // Put the draggable element into the droppable area
@@ -50,10 +88,10 @@ droppableArea1.addEventListener('drop', (event) => {
         additionalCriteria.push(draggableElement.id);
         // Put the draggable element into the droppable area
         appendableAreaAdditional.appendChild(draggableElement);
-    }
+    }*/
 });
 
-// Set up event handler for when dropping occurs
+// Set up event handler for when dropping occurs back into column name data zone
 droppableArea2.addEventListener('drop', (event) => {
     // Prevent default behaviour or dropping can't take place
     event.preventDefault();
@@ -64,8 +102,34 @@ droppableArea2.addEventListener('drop', (event) => {
     // Based on the data, find the draggable element
     const draggableElement = document.getElementById(data);
 
-    // Put the draggable element into the droppable area
-    event.target.appendChild(draggableElement);
+    /*// Put the draggable element into the droppable area
+    event.target.appendChild(draggableElement);*/
+
+    // Find proper container if dropping on a child element
+    const container = event.target.tagName.toLowerCase() === 'ul' ? 
+    event.target : event.target.closest('ul');
+
+    if (container) {
+        // Find the closest element based on mouse position
+        const mouseY = event.clientY;
+        const children = Array.from(container.children);
+        
+        // Find the element to insert before
+        let insertBeforeElement = null;
+        
+        for (const child of children) {
+            const rect = child.getBoundingClientRect();
+            const childMiddleY = rect.top + rect.height / 2;
+            
+            if (mouseY < childMiddleY) {
+            insertBeforeElement = child;
+            break;
+            }
+        }
+        
+        // Insert the dragged element at the appropriate position
+        container.insertBefore(draggableElement, insertBeforeElement);
+    }
 
     // Remove element from its selected criteria array
     if (fundamentalCriteria.includes(draggableElement.id)) {
@@ -80,17 +144,21 @@ droppableArea2.addEventListener('drop', (event) => {
 
 // Event handler for when a draggable element is being dragged over the droppable area
 droppableArea1.addEventListener('dragover', (event) => {
-    if ((event.target.tagName.toLowerCase() == 'ul') ||
-        (event.target.id.toLowerCase() == 'fundamental_drop') ||
-        (event.target.id.toLowerCase() == 'additional_drop')) {
-    // Prevent the default behavior to allow dropping
+    if ((event.target.tagName.toLowerCase() === 'ul') ||
+        (event.target.id.toLowerCase() === 'fundamental_drop') ||
+        (event.target.id.toLowerCase() === 'fundamental') ||
+        (event.target.id.toLowerCase() === 'additional_drop') ||
+        (event.target.id.toLowerCase() === 'additional') ||
+        event.target.closest('#fundamental') ||
+        event.target.closest('#additional')) {
+        // Prevent the default behavior to allow dropping
         event.preventDefault();
     }
 });
 
 // Event handler for when a draggable element is being dragged over the droppable area
 droppableArea2.addEventListener('dragover', (event) => {
-    if (event.target.tagName.toLowerCase() == 'ul') {
+    if (event.target.tagName.toLowerCase() === 'ul' || event.target.closest('ul')) {
     // Prevent the default behavior to allow dropping
         event.preventDefault();
     }
