@@ -99,5 +99,10 @@ sumContent.textContent = 0;
 calculateButton.addEventListener('click', function() {
     if (sumContent.textContent !== "1") {
         window.alert("Weights must sum up to 1");
-    } else {window.alert("Let's go!")}
+    } else {
+        window.alert("Let's go!");
+        const weightsArray = [additionalCriteriaLabels, weightInputs];
+        const jsonWeightsArray = JSON.stringify(weightsArray);
+        document.getElementById("selected_criteria_array").value = jsonWeightsArray;
+    }
 });
