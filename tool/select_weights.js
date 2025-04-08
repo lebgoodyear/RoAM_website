@@ -99,7 +99,7 @@ sumContent.textContent = 0;
 let additionalWeights = [];
 let weightsArray = [];
 let jsonWeightsArray = JSON.stringify([])
-calculateButton.addEventListener('click', function() {
+calculateButton.addEventListener("click", (event) => {
     if (sumContent.textContent !== "1") {
         window.alert("Weights must sum up to 1");
     } else {
@@ -111,10 +111,6 @@ calculateButton.addEventListener('click', function() {
         weightsArray = [additionalCriteriaLabels, additionalWeights];
         jsonWeightsArray = JSON.stringify(weightsArray);
         document.getElementById("selected_criteria_array").value = jsonWeightsArray;
+        document.getElementById("store_weights").submit();
     }
 });
-
-
-
-// CALCULATE UTILITY
-

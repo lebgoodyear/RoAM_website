@@ -6,7 +6,7 @@
     <meta charset = "UTF-8">
     <title>Calculate success</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="calculate_utility.js" defer></script>
+    <script src="select_weights.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 
         <div id="work_space">
 
-            <?php require 'calculate_utility_back.php'; ?>
+            <?php require 'select_weights_back.php'; ?>
 
             <div id="user_inputs">
 
