@@ -50,7 +50,13 @@
                     </div>
                 </div>
 
-                <button id="calculate">Calculate</button>
+                <div id="calculate">
+                    <form id="store_weights" action="calculate_utility_back.php" method="post">
+                        <input type="hidden" id="criteria_weights_array" name="jsonWeightsArray">
+                        <button type="submit" id="calculate_utility">Calculate</button>
+                    </form>
+                </div>
+
             </div>
 
         </div>
