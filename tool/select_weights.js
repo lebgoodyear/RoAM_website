@@ -38,6 +38,8 @@ function updateSlider(criterion) {
     slider.value = textBox.value;
 }
 
+const resetButton = document.getElementById('reset');
+
 additionalCriteriaLabels.forEach(criterion => {
     const labelElement = document.createElement("label");
     labelElement.textContent = criterion;
@@ -65,7 +67,11 @@ additionalCriteriaLabels.forEach(criterion => {
     inputNumberTextBox.step = 0.05;
     inputNumberTextBox.addEventListener("input", function() {updateSlider(criterion)});
     inputNumberTextBox.addEventListener("input", function() {updateSumCheckbox()});
-
+    resetButton.addEventListener("click", function() {
+        inputNumberTextBox.value = 1/additionalCriteriaLabels.length;
+        updateSlider(criterion);
+        updateSumCheckbox();
+    });
     addWeightsForm.appendChild(labelElement);
     addWeightsForm.appendChild(inputSlider);
     addWeightsForm.appendChild(inputNumberTextBox);
@@ -89,6 +95,19 @@ function updateSumCheckbox() {
 
     sumContent.textContent = sum;
 };
+
+
+
+// RESEST BUTTON
+
+//const resetButton = document.getElementById('reset');
+
+//resetButton.addEventListener("click", (event) => {
+//   additionalCriteriaLabels.forEach(criterion => {
+//        inputNumberTextBox.value = 1/additionalCriteriaLabels.length;
+//        updateSlider(criterion); // Make sure slider is correct
+//   });
+//});
 
 
 const sumCheckbox = document.getElementById('sum');
