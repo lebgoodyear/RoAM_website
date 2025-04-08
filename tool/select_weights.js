@@ -49,7 +49,7 @@ additionalCriteriaLabels.forEach(criterion => {
     inputSlider.type = "range";
     inputSlider.min = 0;
     inputSlider.max = 1;
-    inputSlider.value = 0;
+    inputSlider.value = 1/additionalCriteriaLabels.length;
     inputSlider.step = 0.05;
     inputSlider.addEventListener("input", function() {updateTextBox(criterion)});
     inputSlider.addEventListener("input", function() {updateSumCheckbox()});
@@ -61,7 +61,7 @@ additionalCriteriaLabels.forEach(criterion => {
     inputNumberTextBox.type = "number";
     inputNumberTextBox.min = 0;
     inputNumberTextBox.max = 1;
-    inputNumberTextBox.value = 0;
+    inputNumberTextBox.value = 1/additionalCriteriaLabels.length;
     inputNumberTextBox.step = 0.05;
     inputNumberTextBox.addEventListener("input", function() {updateSlider(criterion)});
     inputNumberTextBox.addEventListener("input", function() {updateSumCheckbox()});
@@ -70,6 +70,8 @@ additionalCriteriaLabels.forEach(criterion => {
     addWeightsForm.appendChild(inputSlider);
     addWeightsForm.appendChild(inputNumberTextBox);
     addWeightsForm.appendChild(document.createElement("br")); // Add a line break for spacing
+
+    updateSlider(criterion) // Make sure slider is correct
 });
 
 
