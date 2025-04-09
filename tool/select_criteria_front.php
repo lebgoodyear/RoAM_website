@@ -22,7 +22,7 @@
 
         <div id="next_button">
             <form id="store_criteria" action="store_criteria_back.php" method="post">
-                <input type="hidden" id="selected_criteria_array" name="jsonArray">
+                <input type="hidden" id="selected_criteria_array" name="jsonCriteriaArray">
                 <button type="submit" id="go_to_weights">Next</button>
             </form>
 

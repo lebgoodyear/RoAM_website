@@ -173,7 +173,7 @@ const nextButton = document.getElementById("go_to_weights");
 // Store and send to html form for php processing
 nextButton.addEventListener("click", (event) => {
     const criteriaArray = [fundamentalCriteria, additionalCriteria];
-    const jsonArray = JSON.stringify(criteriaArray);
-    document.getElementById("selected_criteria_array").value = jsonArray;
+    const jsonCriteriaArray = JSON.stringify(criteriaArray);
+    document.getElementById("selected_criteria_array").value = jsonCriteriaArray;
     document.getElementById("store_criteria").submit();
 })

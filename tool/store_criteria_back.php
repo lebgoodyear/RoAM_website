@@ -2,10 +2,10 @@
 
 session_start();
 
-$jsonArray = $_POST["jsonArray"];
+$jsonCriteriaArray = $_POST["jsonCriteriaArray"];
 
 // Save array of criteria to session
-$_SESSION['jsonArray'] = $jsonArray;
+$_SESSION['jsonCriteriaArray'] = $jsonCriteriaArray;
 
 header('Location: select_weights_front.php');
 
