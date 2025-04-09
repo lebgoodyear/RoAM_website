@@ -2,10 +2,10 @@
 
 session_start();
 
-if (isset($_SESSION['jsonArray'])) {
-    $jsonArray = $_SESSION['jsonArray'];
+if (isset($_SESSION['jsonCriteriaArray'])) {
+    $jsonCriteriaArray = $_SESSION['jsonCriteriaArray'];
 
-    $criteriaArray = json_decode($jsonArray, true);
+    $criteriaArray = json_decode($jsonCriteriaArray, true);
 
     $fundamental = $criteriaArray[0];
 
