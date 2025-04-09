@@ -172,6 +172,7 @@ const nextButton = document.getElementById("go_to_weights");
 
 // Store and send to html form for php processing
 nextButton.addEventListener("click", (event) => {
+    additionalCriteria.push("Baseline"); // add baseline variable to additional criteria
     const criteriaArray = [fundamentalCriteria, additionalCriteria];
     const jsonCriteriaArray = JSON.stringify(criteriaArray);
     document.getElementById("selected_criteria_array").value = jsonCriteriaArray;
