@@ -4,8 +4,7 @@ session_start();
 
 if (isset($_SESSION['csv_data'])) {
     $data = $_SESSION['csv_data'];
-
-    $column_names = $data[0];
+    $column_names = $_SESSION['headers'];
 
     if ($column_names[0] == "") {
         array_splice($column_names, 0, 1);
