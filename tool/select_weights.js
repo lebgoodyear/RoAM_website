@@ -112,7 +112,56 @@ let jsonWeightsArray = JSON.stringify([])
 
 const calculateButton = document.getElementById("calculate_utility");
 
+// Global declarations
 let utilities = [];
+let bins = [];
+let binLabels = [];
+let histogramChart = null;
+
+// Initialize an empty chart
+function initializeEmptyChart() {
+  const ctx = document.getElementById('histogramChart').getContext('2d');
+  histogramChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [],
+      datasets: [{
+        label: 'Frequency',
+        data: [],
+        backgroundColor: 'rgba(54, 162, 235, 0.6)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        title: {
+          display: true,
+          text: 'Data Histogram'
+        },
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Frequency'
+          }
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Value Ranges'
+          }
+        }
+      }
+    }
+  });
+}
 
 calculateButton.addEventListener("click", (event) => {
     // Prevent default form behaviour
@@ -141,10 +190,60 @@ calculateButton.addEventListener("click", (event) => {
             document.getElementById("results_container").innerHTML = data;
             // Load utilities as js variable
             utilities = JSON.parse(document.getElementById("utility_array").textContent);
+
+            // Calculate histogram data
+            function generateHistogramData(data, binCount = 8) {
+                // Find min and max values
+                const min = Math.min(...data);
+                const max = Math.max(...data);
+
+                // Calculate bin width
+                const binWidth = (max - min) / binCount;
+
+                // Initialize bins
+                const bins = Array(binCount).fill(0);
+                const binLabels = [];
+
+                // Create bin labels
+                for (let i = 0; i < binCount; i++) {
+                    const binStart = min + i * binWidth;
+                    const binEnd = binStart + binWidth;
+                    binLabels.push(`${binStart.toFixed(1)}-${binEnd.toFixed(1)}`);
+                }
+
+                // Fill bins
+                data.forEach(val => {
+                    // Handle edge case for maximum value
+                    if (val === max) {
+                    bins[binCount - 1]++;
+                    } else {
+                    const binIndex = Math.floor((val - min) / binWidth);
+                    bins[binIndex]++;
+                    }
+                });
+
+                return { bins, binLabels };
+            };
+
+            const histogramData = generateHistogramData(utilities);
+  
+            // Update the global variables
+            bins = histogramData.bins;
+            binLabels = histogramData.binLabels;
+            
+            // Update the chart with new data
+            histogramChart.data.labels = binLabels;
+            histogramChart.data.datasets[0].data = bins;
+            histogramChart.update();
+
         })
         .catch(error => {
             console.error("Error:", error);
         });
     }
 });  
+
+document.addEventListener('DOMContentLoaded', initializeEmptyChart);
+
+
 

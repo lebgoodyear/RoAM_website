@@ -4,8 +4,9 @@
 
 <head>
     <meta charset = "UTF-8">
-    <title>Calculate success</title>
+    <title>Calculate Utility</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="select_weights.js" defer></script>
 </head>
 
@@ -68,6 +69,7 @@
         <div id="plot_space">
             <p>Utility distribution</p>
             <div id="results_container"></div>
+            <canvas id="histogramChart"></canvas>
         </div>
 
     </div>
