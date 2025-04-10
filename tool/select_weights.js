@@ -38,6 +38,7 @@ function updateSlider(criterion) {
     slider.value = textBox.value;
 }
 
+// Reset button
 const resetButton = document.getElementById('reset');
 
 additionalCriteriaLabels.forEach(criterion => {
@@ -97,22 +98,7 @@ function updateSumCheckbox() {
 };
 
 
-
-// RESEST BUTTON
-
-//const resetButton = document.getElementById('reset');
-
-//resetButton.addEventListener("click", (event) => {
-//   additionalCriteriaLabels.forEach(criterion => {
-//        inputNumberTextBox.value = 1/additionalCriteriaLabels.length;
-//        updateSlider(criterion); // Make sure slider is correct
-//   });
-//});
-
-
 const sumCheckbox = document.getElementById('sum');
-
-const calculateButton = document.getElementById('calculate');
 
 const sumContent = sumCheckbox.appendChild(document.createElement("p"));
 sumContent.textContent = 0;
@@ -120,7 +106,13 @@ sumContent.textContent = 0;
 let additionalWeights = [];
 let weightsArray = [];
 let jsonWeightsArray = JSON.stringify([])
+
+const calculateButton = document.getElementById("calculate_utility");
+
 calculateButton.addEventListener("click", (event) => {
+    // Prevent default form behaviour
+    event.preventDefault();
+
     if (sumContent.textContent !== "1") {
         window.alert("Weights must sum up to 1");
     } else {
@@ -131,7 +123,25 @@ calculateButton.addEventListener("click", (event) => {
         };
         weightsArray = [additionalCriteriaLabels, additionalWeights];
         jsonWeightsArray = JSON.stringify(weightsArray);
-        document.getElementById("selected_criteria_array").value = jsonWeightsArray;
-        document.getElementById("store_weights").submit();
+
+        // Fetch API
+        fetch("calculate_utility_back.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: "jsonWeightsArray=" + encodeURIComponent(jsonWeightsArray)
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("results_container").innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
     }
-});
+});        
+        //document.getElementById("criteria_weights_array").value = jsonWeightsArray;
+        //document.getElementById("store_weights").submit();
+    //}
+//});

@@ -54,7 +54,7 @@
                     <button type="submit">Reset</button>
                 </div>
 
-                <div id="calculate">
+                <div id="calculate_button">
                     <form id="store_weights" action="calculate_utility_back.php" method="post">
                         <input type="hidden" id="criteria_weights_array" name="jsonWeightsArray">
                         <button type="submit" id="calculate_utility">Calculate</button>
@@ -67,6 +67,7 @@
 
         <div id="plot_space">
             <p>Utility distribution</p>
+            <div id="results_container"></div>
         </div>
 
     </div>
