@@ -2,11 +2,12 @@
 
 session_start();
 
-if (isset($_SESSION['jsonWeightsArray'])) {
+//if (isset($_SESSION['jsonWeightsArray'])) {
 
+    $jsonWeightsArray = $_POST["jsonWeightsArray"];
 
     // Get weights
-    $jsonWeightsArray = $_SESSION['jsonWeightsArray'];
+    //$jsonWeightsArray = $_SESSION['jsonWeightsArray'];
     $weightsArray = json_decode($jsonWeightsArray, true);
     $betas = $weightsArray[1];
 
@@ -105,6 +106,6 @@ if (isset($_SESSION['jsonWeightsArray'])) {
     print_r($u);
 
 
-} else {echo "<p>not working</p>";}
+//} else {echo "<p>not working</p>";}
 
 ?>
