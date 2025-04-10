@@ -102,9 +102,15 @@ session_start();
         //$data[$i]['calculation4'] = /* your fourth calculation logic */;
     }
 
-    $u = array_column($data, 'utility');
-    print_r($u);
+    // Extract utilities
+    $utilities = array_column($data, 'utility');
 
+    // Load utilities into html to pass to javascript
+    echo "<div hidden='true'>";
+    echo "<p id='utility_array'>";
+    echo json_encode($utilities);
+    echo "</p>";
+    echo "</div>";
 
 //} else {echo "<p>not working</p>";}
 

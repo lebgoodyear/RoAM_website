@@ -98,6 +98,9 @@ function updateSumCheckbox() {
 };
 
 
+
+// CALCULATE UTILITIES
+
 const sumCheckbox = document.getElementById('sum');
 
 const sumContent = sumCheckbox.appendChild(document.createElement("p"));
@@ -109,6 +112,8 @@ let jsonWeightsArray = JSON.stringify([])
 
 const calculateButton = document.getElementById("calculate_utility");
 
+let utilities = [];
+
 calculateButton.addEventListener("click", (event) => {
     // Prevent default form behaviour
     event.preventDefault();
@@ -116,7 +121,6 @@ calculateButton.addEventListener("click", (event) => {
     if (sumContent.textContent !== "1") {
         window.alert("Weights must sum up to 1");
     } else {
-        window.alert("Let's go!");
         additionalWeights = [];
         for (let i = 0; i < weightInputs.length; i++) {
             additionalWeights[i] = weightInputs[i].valueAsNumber;
@@ -135,13 +139,12 @@ calculateButton.addEventListener("click", (event) => {
         .then(response => response.text())
         .then(data => {
             document.getElementById("results_container").innerHTML = data;
+            // Load utilities as js variable
+            utilities = JSON.parse(document.getElementById("utility_array").textContent);
         })
         .catch(error => {
             console.error("Error:", error);
         });
     }
-});        
-        //document.getElementById("criteria_weights_array").value = jsonWeightsArray;
-        //document.getElementById("store_weights").submit();
-    //}
-//});
+});  
+
