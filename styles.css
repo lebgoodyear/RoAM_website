@@ -401,6 +401,8 @@ input {
   display: flex;
   flex-direction: row;
   font-size: 1rem;
+  padding: 3rem 0;
+  margin: 0 116px;
 }
 
 #work_space {
@@ -410,7 +412,6 @@ input {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   border-radius: 2rem;
-  margin: 5rem 0;
   padding: 2rem;
   width: 30%;
 }
@@ -541,5 +542,14 @@ input {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+  width: 100%;
+}
+
+#results_display {
+  width: 100%;
+  padding: 2rem;
+}
+
+#histgramChart {
   width: 100%;
 }

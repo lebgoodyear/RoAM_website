@@ -68,8 +68,10 @@
         </div>
 
         <div id="plot_space">
-            <div id="results_container"></div>
-            <canvas id="histogramChart"></canvas>
+            <div id="results_display">
+                <div id="results_container"></div>
+                <canvas id="histogramChart"></canvas>
+            </div>
         </div>
 
     </div>
