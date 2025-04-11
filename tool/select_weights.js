@@ -6,6 +6,18 @@ addCSS("#upload, #criteria {background-image: repeating-linear-gradient(25deg, v
 addCSS("#utility {background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);}")  
 addCSS("#tool_bar_list #utility p {background: var(--lightgrey)};") 
 
+// Funcion to extract css variables
+const getCSSVar = (varName) => {
+    return getComputedStyle(document.documentElement).getPropertyValue(varName).trim();
+};
+
+// Helper function to convert hex to rgba
+function hexToRGBA(hex, alpha = 1) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
 
 
 // GENERATE FORM FOR WEIGHTS
@@ -145,8 +157,8 @@ function initializeEmptyChart() {
       datasets: [{
         label: 'Frequency',
         data: [],
-        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-        borderColor: 'rgba(54, 162, 235, 1)',
+        backgroundColor: hexToRGBA(getCSSVar('--midblue'), 0.5),
+        borderColor: hexToRGBA(getCSSVar('--midblue'), 0.5),
         borderWidth: 1
       }]
     },
@@ -154,8 +166,7 @@ function initializeEmptyChart() {
       responsive: true,
       plugins: {
         title: {
-          display: true,
-          text: 'Data Histogram'
+          display: false,
         },
         legend: {
           display: false
@@ -172,7 +183,7 @@ function initializeEmptyChart() {
         x: {
           title: {
             display: true,
-            text: 'Value Ranges'
+            text: 'Utility'
           }
         }
       }
