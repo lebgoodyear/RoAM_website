@@ -149,47 +149,54 @@ let histogramChart = null;
 
 // Initialize an empty chart
 function initializeEmptyChart() {
-  const ctx = document.getElementById('histogramChart').getContext('2d');
-  histogramChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [],
-      datasets: [{
-        label: 'Frequency',
-        data: [],
-        backgroundColor: hexToRGBA(getCSSVar('--midblue'), 0.5),
-        borderColor: hexToRGBA(getCSSVar('--midblue'), 0.5),
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        title: {
-          display: false,
+
+    const ctx = document.getElementById('histogramChart').getContext('2d');
+
+    histogramChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['0-0.1', '0.1-0.2', '0.2-0.3', '0.3-0.4', '0.4-0.5', '0.5-0.6', '0.6-0.7', '0.7-0.8', '0.8-0.9', '0.9-1.0'],
+            datasets: [{
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                backgroundColor: hexToRGBA(getCSSVar('--midblue'), 0.6),
+            }]
         },
-        legend: {
-          display: false
-        }
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Frequency'
-          }
+        options: {
+            responsive: true,
+            plugins: {
+                title: {
+                display: false,
+                },
+                legend: {
+                display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return context[0].label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Frequency'
+                    }
+                },
+                x: {
+                    type: 'category',
+                    title: {
+                        display: true,
+                        text: 'Utility'
+                    },
+                },
+            },
         },
-        x: {
-          title: {
-            display: true,
-            text: 'Utility'
-          }
-        }
-      }
-    }
-  });
-}
+    });
+};
 
 calculateButton.addEventListener("click", (event) => {
     // Prevent default form behaviour
@@ -219,50 +226,28 @@ calculateButton.addEventListener("click", (event) => {
             // Load utilities as js variable
             utilities = JSON.parse(document.getElementById("utility_array").textContent);
 
-            // Calculate histogram data
-            function generateHistogramData(data, binCount = 8) {
-                // Find min and max values
-                const min = Math.min(...data);
-                const max = Math.max(...data);
-
-                // Calculate bin width
-                const binWidth = (max - min) / binCount;
-
-                // Initialize bins
-                const bins = Array(binCount).fill(0);
-                const binLabels = [];
-
-                // Create bin labels
-                for (let i = 0; i < binCount; i++) {
-                    const binStart = min + i * binWidth;
-                    const binEnd = binStart + binWidth;
-                    binLabels.push(`${binStart.toFixed(1)}-${binEnd.toFixed(1)}`);
-                }
-
-                // Fill bins
-                data.forEach(val => {
-                    // Handle edge case for maximum value
-                    if (val === max) {
-                    bins[binCount - 1]++;
-                    } else {
-                    const binIndex = Math.floor((val - min) / binWidth);
-                    bins[binIndex]++;
-                    }
-                });
-
-                return { bins, binLabels };
-            };
-
-            const histogramData = generateHistogramData(utilities);
-  
-            // Update the global variables
-            bins = histogramData.bins;
-            binLabels = histogramData.binLabels;
+           /// Function to update histogram data
+        function updateHistogram(data) {
+            // Initialize bins (10 bins for ranges 0-0.1, 0.1-0.2, ..., 0.9-1.0)
+            const bins = Array(10).fill(0);
             
-            // Update the chart with new data
-            histogramChart.data.labels = binLabels;
+            // Fill bins
+            data.forEach(val => {
+            // Handle edge case for maximum value
+            if (val === 1) {
+                bins[9]++;
+            } else {
+                const binIndex = Math.floor(val * 10);
+                bins[binIndex]++;
+            }
+            });
+            
+            // Update chart data
             histogramChart.data.datasets[0].data = bins;
             histogramChart.update();
+        }
+
+        updateHistogram(utilities)
 
         })
         .catch(error => {
