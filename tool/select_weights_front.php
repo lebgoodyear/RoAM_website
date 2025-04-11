@@ -37,7 +37,6 @@
             <div id="user_inputs">
 
                 <div id="weights">
-                    <p>Weights</p>
 
                     <form id="add_weights">
                     </form> 
@@ -51,15 +50,17 @@
                     </div>
                 </div>
 
-                <div id="reset">
-                    <button type="submit">Reset</button>
-                </div>
+                <div id='weight_buttons'>
+                    <div id="reset">
+                        <button type="submit">Reset</button>
+                    </div>
 
-                <div id="calculate_button">
-                    <form id="store_weights" action="calculate_utility_back.php" method="post">
-                        <input type="hidden" id="criteria_weights_array" name="jsonWeightsArray">
-                        <button type="submit" id="calculate_utility">Calculate</button>
-                    </form>
+                    <div id="calculate_button">
+                        <form id="store_weights" action="calculate_utility_back.php" method="post">
+                            <input type="hidden" id="criteria_weights_array" name="jsonWeightsArray">
+                            <button type="submit" id="calculate_utility">Calculate</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
@@ -67,7 +68,6 @@
         </div>
 
         <div id="plot_space">
-            <p>Utility distribution</p>
             <div id="results_container"></div>
             <canvas id="histogramChart"></canvas>
         </div>

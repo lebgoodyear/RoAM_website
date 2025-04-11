@@ -407,7 +407,7 @@ input {
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  background-color: var(--midblue);
+  background-color: var(--darkblue);
   color: var(--lightgrey);
   border-radius: 2rem;
   margin: 5rem 0;
@@ -419,15 +419,17 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
 }
 
-.final_criteria {
+.final_criteria_fundamental,
+.final_criteria_additional {
   font-weight: 900;
 }
 
-.final_criteria > ul {
+.final_criteria_fundamental > ul,
+.final_criteria_additional > ul {
   display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
@@ -435,6 +437,10 @@ input {
   font-weight: 900;
   text-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.final_criteria_additional > ul {
+  flex-direction: column;
 }
 
 .fundamental_variable {
@@ -453,16 +459,51 @@ input {
 }
 
 #user_inputs {
-  background-color: var(--lightgrey);
+  /*background-color: var(--lightgrey);
   color: var(--darkblue);
-  border-radius: 2rem;
+  border-radius: 2rem;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: right;
-  padding: 2rem 2rem;
+  /*padding: 2rem 2rem;
+  gap: 2rem;*/
+}
+
+#weights {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#add_weights {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+}
+
+.weight-container {
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  font-weight: 900;
+}
+
+.weight-container > .weight-label {
+  margin: 0.75rem;
+}
+
+.weight-controls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 #user_inputs > button {
@@ -473,8 +514,18 @@ input {
   vertical-align: middle;
 }
 
-.slider{
-  margin: 0.75rem 2rem;
+.slider {
+  box-sizing: border-box;
+  margin: 0.75rem;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.number_text_box {
+  box-sizing: border-box;
+  margin: 0.75rem;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 #sumbox{
@@ -484,4 +535,11 @@ input {
   flex-direction: row;
   margin-left: auto;
   gap: 1rem;
+}
+
+#weight_buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
 }

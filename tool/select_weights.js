@@ -42,8 +42,19 @@ function updateSlider(criterion) {
 const resetButton = document.getElementById('reset');
 
 additionalCriteriaLabels.forEach(criterion => {
+
+    // Create a container div for each variable
+    const containerDiv = document.createElement("div");
+    containerDiv.classList.add("weight-container");
+  
+    // Create and set up the label
     const labelElement = document.createElement("label");
     labelElement.textContent = criterion;
+    labelElement.classList.add("weight-label");
+  
+    // Create a div to contain the slider and text box (for layout)
+    const controlsDiv = document.createElement("div");
+    controlsDiv.classList.add("weight-controls");
 
     const inputSlider = document.createElement("input");
     inputSlider.classList.add(criterion);
@@ -68,15 +79,21 @@ additionalCriteriaLabels.forEach(criterion => {
     inputNumberTextBox.step = 0.05;
     inputNumberTextBox.addEventListener("input", function() {updateSlider(criterion)});
     inputNumberTextBox.addEventListener("input", function() {updateSumCheckbox()});
+
     resetButton.addEventListener("click", function() {
         inputNumberTextBox.value = 1/additionalCriteriaLabels.length;
         updateSlider(criterion);
         updateSumCheckbox();
     });
-    addWeightsForm.appendChild(labelElement);
-    addWeightsForm.appendChild(inputSlider);
-    addWeightsForm.appendChild(inputNumberTextBox);
-    addWeightsForm.appendChild(document.createElement("br")); // Add a line break for spacing
+
+    // Append elements to the container
+    containerDiv.appendChild(labelElement);
+    controlsDiv.appendChild(inputSlider);
+    controlsDiv.appendChild(inputNumberTextBox);
+    containerDiv.appendChild(controlsDiv);
+  
+    // Add the container to the form
+    addWeightsForm.appendChild(containerDiv);
 
     updateSlider(criterion) // Make sure slider is correct
 });
@@ -104,7 +121,7 @@ function updateSumCheckbox() {
 const sumCheckbox = document.getElementById('sum');
 
 const sumContent = sumCheckbox.appendChild(document.createElement("p"));
-sumContent.textContent = 0;
+sumContent.textContent = 1;
 
 let additionalWeights = [];
 let weightsArray = [];

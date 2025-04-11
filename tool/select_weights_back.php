@@ -13,7 +13,7 @@ if (isset($_SESSION['jsonCriteriaArray'])) {
 
     echo "<div id='criterion_selection'>";
 
-    echo "<div class='final_criteria'>";
+    echo "<div class='final_criteria_fundamental'>";
 
     echo "<p>FUNDAMENTAL CRITERIA</p>";
 
@@ -28,7 +28,7 @@ if (isset($_SESSION['jsonCriteriaArray'])) {
 
     echo "</div>";
 
-    echo "<div class='final_criteria'>";
+    echo "<div class='final_criteria_additional'>";
 
     echo "<p>ADDITIONAL CRITERIA</p>";
 
