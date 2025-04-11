@@ -69,6 +69,7 @@
 
         <div id="plot_space">
             <div id="results_display">
+                <p>Distribution of utilities</p>
                 <div id="results_container"></div>
                 <canvas id="histogramChart"></canvas>
             </div>

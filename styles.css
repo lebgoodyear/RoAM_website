@@ -1,7 +1,7 @@
 :root {
   --darkblue: #1F2937;
   --midblue: #3882F6;
-  --lightblue: #6699cc;
+  --lightblue: #e5f3fd;
   --white: #ffffff;
   --lightgrey: #ebedf3;
   --midgrey: #BDBDBD;
@@ -15,7 +15,7 @@ html, body {
   padding: 0;
   height: 100%;
   font-size: 1em;
-  /*font-family: Helvetica, sans-serif;*/
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -403,6 +403,7 @@ input {
   font-size: 1rem;
   padding: 3rem 0;
   margin: 0 116px;
+  gap: 2rem;
 }
 
 #work_space {
@@ -457,6 +458,11 @@ input {
   display: flex;
   justify-content: center;
   width: 70%;
+  background-color: var(--lightgrey);
+  border-radius: 2rem;
+  border: 0.5rem solid var(--darkblue);
+  box-sizing: border-box;
+  padding: 2rem;
 }
 
 #user_inputs {
@@ -527,6 +533,8 @@ input {
   margin: 0.75rem;
   flex-grow: 1;
   min-width: 0;
+  font-size: 1.2em;
+  font-family: inherit;
 }
 
 #sumbox{
@@ -548,6 +556,14 @@ input {
 #results_display {
   width: 100%;
   padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--darkblue);
+  font-weight: 600;
+}
+
+#results_display > p {
+  margin: 0 0 2rem 0;
 }
 
 #histgramChart {
