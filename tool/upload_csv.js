@@ -16,3 +16,14 @@ dropZone.addEventListener('dragover', (event) => {
 dropZone.addEventListener('dragleave', (event) =>{
     dropZone.classList.remove('hover');
 })
+
+// Add this drop event listener to handle the dropped file
+dropZone.addEventListener('drop', (event) => {
+    event.preventDefault();
+    dropZone.classList.remove('hover');
+    
+    if (event.dataTransfer.files.length > 0) {
+        // Set the file input to the dropped file
+        csvFile.files = event.dataTransfer.files;
+    }
+});
