@@ -76,19 +76,21 @@ droppableArea1.addEventListener('drop', (event) => {
         // Insert the dragged element at the appropriate position
         targetContainer.insertBefore(draggableElement, insertBeforeElement);
       }
-
-    /*// if draggable element is moved to fundamental list, add to fundamental array
-    if (event.target.id.toLowerCase() == 'fundamental') {
-        fundamentalCriteria.push(draggableElement.id);
-        // Put the draggable element into the droppable area
-        appendableAreaFundamental.appendChild(draggableElement);
+    
+    // Remove from array if moving to a different list
+    if (fundamentalCriteria.includes(draggableElement.id)) {
+        const indexFundamental = fundamentalCriteria.indexOf(draggableElement.id);
+        if (targetContainer !== appendableAreaFundamental) { // Only remove if moving to a different list
+                fundamentalCriteria.splice(indexFundamental, 1);
+        }
     }
-   // if draggable element is moved to additional list, add to additional array
-    if (event.target.id.toLowerCase() == 'additional') {
-        additionalCriteria.push(draggableElement.id);
-        // Put the draggable element into the droppable area
-        appendableAreaAdditional.appendChild(draggableElement);
-    }*/
+    if (additionalCriteria.includes(draggableElement.id)) {
+        const indexAdditional = additionalCriteria.indexOf(draggableElement.id);
+        if (targetContainer !== appendableAreaAdditional) { // Only remove if moving to a different list
+                additionalCriteria.splice(indexAdditional, 1);
+        }
+    }
+
 });
 
 // Set up event handler for when dropping occurs back into column name data zone
@@ -132,14 +134,16 @@ droppableArea2.addEventListener('drop', (event) => {
     }
 
     // Remove element from its selected criteria array
-    if (fundamentalCriteria.includes(draggableElement.id)) {
-        const indexFundamental = fundamentalCriteria.indexOf(draggableElement.id);
-        fundamentalCriteria.splice(indexFundamental, 1);
+    const fundamentalIndex = fundamentalCriteria.indexOf(draggableElement.id);
+    if (fundamentalIndex !== -1) {
+        fundamentalCriteria.splice(fundamentalIndex, 1);
     }
-    if (additionalCriteria.includes(draggableElement.id)) {
-        const indexAdditional = additionalCriteria.indexOf(draggableElement.id);
-        additionalCriteria.splice(indexAdditional, 1);
+    
+    const additionalIndex = additionalCriteria.indexOf(draggableElement.id);
+    if (additionalIndex !== -1) {
+        additionalCriteria.splice(additionalIndex, 1);
     }
+
 });
 
 // Event handler for when a draggable element is being dragged over the droppable area
