@@ -14,6 +14,7 @@ session_start();
 
     // Get data
     $data = $_SESSION['csv_data'];
+    $headers = $_SESSION['headers'];
 
 
     // Get criteria
@@ -111,6 +112,12 @@ session_start();
     echo json_encode($utilities);
     echo "</p>";
     echo "</div>";
+
+    $newHeaders = array_merge($headers, ['utility']);//, 'calculation2', 'calculation3', 'calculation4']);
+
+    // Save to session for use in csv generation script
+    $_SESSION['newData'] = $data;
+    $_SESSION['newHeaders'] = $newHeaders;
 
 //} else {echo "<p>not working</p>";}
 

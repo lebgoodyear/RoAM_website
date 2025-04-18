@@ -259,4 +259,10 @@ calculateButton.addEventListener("click", (event) => {
 document.addEventListener('DOMContentLoaded', initializeEmptyChart);
 
 
+document.getElementById('next_button').addEventListener('click', event => {
+    event.preventDefault();
+    
+    // Redirect to the CSV generation script
+    window.location.href = 'generate_csv_back.php';
+});
 
