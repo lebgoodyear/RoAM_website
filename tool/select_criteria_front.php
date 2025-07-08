@@ -26,7 +26,7 @@
                 <button type="submit" id="go_to_weights">Next</button>
             </form>
 
-            <!--<a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>-->
+            <!--<a href="./calculate_metric_front.php" id="go_to_metric"><button>Next</button></a>-->
         </div>
 
     </div>
@@ -41,9 +41,9 @@
             </div>
 
             <div id="variable_drop">
-                <div id="fundamental_drop">
-                    <p class="variables criteria">FUNDAMENTAL CRITERIA</p>
-                    <ul id="fundamental"></ul>
+                <div id="root_drop">
+                    <p class="variables criteria">ROOT CRITERIA</p>
+                    <ul id="root"></ul>
                 </div>
                 <div id="additional_drop">
                     <p class="variables criteria">ADDITIONAL CRITERIA</p>

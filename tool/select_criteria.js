@@ -13,11 +13,11 @@ addCSS("#tool_bar_list #criteria p {background: var(--lightgrey)};")
 const draggableElements = Array.from(document.getElementsByClassName('draggable_variables'));
 const droppableArea1 = document.getElementById('variable_drop');
 const droppableArea2 = document.getElementById('column_names');
-const appendableAreaFundamental = document.getElementById('fundamental')
+const appendableAreaRoot = document.getElementById('root')
 const appendableAreaAdditional = document.getElementById('additional')
 
-// Set up arrays to store fundamental and additional criteria
-const fundamentalCriteria = []
+// Set up arrays to store root and additional criteria
+const rootCriteria = []
 const additionalCriteria = []
 
 // Set up event handler for when dropping starts
@@ -41,15 +41,15 @@ droppableArea1.addEventListener('drop', (event) => {
 
     // Find the target drop area and determine where to insert the element
     let targetContainer;
-    if (event.target.id.toLowerCase() === 'fundamental') {
-        targetContainer = appendableAreaFundamental;
-        fundamentalCriteria.push(draggableElement.id);
+    if (event.target.id.toLowerCase() === 'root') {
+        targetContainer = appendableAreaRoot;
+        rootCriteria.push(draggableElement.id);
     } else if (event.target.id.toLowerCase() === 'additional') {
         targetContainer = appendableAreaAdditional;
         additionalCriteria.push(draggableElement.id);
-    } else if (event.target.closest('#fundamental')) {
-        targetContainer = appendableAreaFundamental;
-        fundamentalCriteria.push(draggableElement.id);
+    } else if (event.target.closest('#root')) {
+        targetContainer = appendableAreaRoot;
+        rootCriteria.push(draggableElement.id);
     } else if (event.target.closest('#additional')) {
         targetContainer = appendableAreaAdditional;
         additionalCriteria.push(draggableElement.id);
@@ -78,10 +78,10 @@ droppableArea1.addEventListener('drop', (event) => {
       }
     
     // Remove from array if moving to a different list
-    if (fundamentalCriteria.includes(draggableElement.id)) {
-        const indexFundamental = fundamentalCriteria.indexOf(draggableElement.id);
-        if (targetContainer !== appendableAreaFundamental) { // Only remove if moving to a different list
-                fundamentalCriteria.splice(indexFundamental, 1);
+    if (rootCriteria.includes(draggableElement.id)) {
+        const indexRoot = rootCriteria.indexOf(draggableElement.id);
+        if (targetContainer !== appendableAreaRoot) { // Only remove if moving to a different list
+                rootCriteria.splice(indexRoot, 1);
         }
     }
     if (additionalCriteria.includes(draggableElement.id)) {
@@ -134,9 +134,9 @@ droppableArea2.addEventListener('drop', (event) => {
     }
 
     // Remove element from its selected criteria array
-    const fundamentalIndex = fundamentalCriteria.indexOf(draggableElement.id);
-    if (fundamentalIndex !== -1) {
-        fundamentalCriteria.splice(fundamentalIndex, 1);
+    const rootIndex = rootCriteria.indexOf(draggableElement.id);
+    if (rootIndex !== -1) {
+        rootCriteria.splice(rootIndex, 1);
     }
     
     const additionalIndex = additionalCriteria.indexOf(draggableElement.id);
@@ -149,11 +149,11 @@ droppableArea2.addEventListener('drop', (event) => {
 // Event handler for when a draggable element is being dragged over the droppable area
 droppableArea1.addEventListener('dragover', (event) => {
     if ((event.target.tagName.toLowerCase() === 'ul') ||
-        (event.target.id.toLowerCase() === 'fundamental_drop') ||
-        (event.target.id.toLowerCase() === 'fundamental') ||
+        (event.target.id.toLowerCase() === 'root_drop') ||
+        (event.target.id.toLowerCase() === 'root') ||
         (event.target.id.toLowerCase() === 'additional_drop') ||
         (event.target.id.toLowerCase() === 'additional') ||
-        event.target.closest('#fundamental') ||
+        event.target.closest('#root') ||
         event.target.closest('#additional')) {
         // Prevent the default behavior to allow dropping
         event.preventDefault();
@@ -177,7 +177,7 @@ const nextButton = document.getElementById("go_to_weights");
 // Store and send to html form for php processing
 nextButton.addEventListener("click", (event) => {
     additionalCriteria.push("Baseline"); // add baseline variable to additional criteria
-    const criteriaArray = [fundamentalCriteria, additionalCriteria];
+    const criteriaArray = [rootCriteria, additionalCriteria];
     const jsonCriteriaArray = JSON.stringify(criteriaArray);
     document.getElementById("selected_criteria_array").value = jsonCriteriaArray;
     document.getElementById("store_criteria").submit();

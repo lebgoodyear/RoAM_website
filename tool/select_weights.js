@@ -3,8 +3,8 @@
 // Add css into tool progress bar to show which stage we are at
 const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
 addCSS("#upload, #criteria {background-image: repeating-linear-gradient(25deg, var(--midgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);}")
-addCSS("#utility {background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);}")  
-addCSS("#tool_bar_list #utility p {background: var(--lightgrey)};") 
+addCSS("#metric {background-image: repeating-linear-gradient(25deg, var(--lightgrey) 0 1.5rem, var(--darkgrey) 1.5rem 2rem);}")  
+addCSS("#tool_bar_list #metric p {background: var(--lightgrey)};") 
 
 // Funcion to extract css variables
 const getCSSVar = (varName) => {
@@ -22,11 +22,11 @@ function hexToRGBA(hex, alpha = 1) {
 
 // GENERATE FORM FOR WEIGHTS
 
-const fundamentalArray = Array.from(document.getElementsByClassName('fundamental_variable'));
+const rootArray = Array.from(document.getElementsByClassName('root_variable'));
 
-const fundamentalCriteriaLabels = [];
-fundamentalArray.forEach(criterion => {
-    fundamentalCriteriaLabels.push(criterion.id);
+const rootCriteriaLabels = [];
+rootArray.forEach(criterion => {
+    rootCriteriaLabels.push(criterion.id);
 })
 
 const additionalArray = Array.from(document.getElementsByClassName('additional_variable'));
@@ -128,7 +128,7 @@ function updateSumCheckbox() {
 
 
 
-// CALCULATE UTILITIES
+// CONSTRUCT METRIC
 
 const sumCheckbox = document.getElementById('sum');
 
@@ -139,10 +139,10 @@ let additionalWeights = [];
 let weightsArray = [];
 let jsonWeightsArray = JSON.stringify([])
 
-const calculateButton = document.getElementById("calculate_utility");
+const calculateButton = document.getElementById("calculate_metric");
 
 // Global declarations
-let utilities = [];
+let metricValues = [];
 let bins = [];
 let binLabels = [];
 let histogramChart = null;
@@ -190,7 +190,7 @@ function initializeEmptyChart() {
                     type: 'category',
                     title: {
                         display: true,
-                        text: 'Utility'
+                        text: 'Metric'
                     },
                 },
             },
@@ -213,7 +213,7 @@ calculateButton.addEventListener("click", (event) => {
         jsonWeightsArray = JSON.stringify(weightsArray);
 
         // Fetch API
-        fetch("calculate_utility_back.php", {
+        fetch("calculate_metric_back.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -223,8 +223,8 @@ calculateButton.addEventListener("click", (event) => {
         .then(response => response.text())
         .then(data => {
             document.getElementById("results_container").innerHTML = data;
-            // Load utilities as js variable
-            utilities = JSON.parse(document.getElementById("utility_array").textContent);
+            // Load metric values as js variable
+            metricValues = JSON.parse(document.getElementById("metric_array").textContent);
 
            /// Function to update histogram data
         function updateHistogram(data) {
@@ -247,7 +247,7 @@ calculateButton.addEventListener("click", (event) => {
             histogramChart.update();
         }
 
-        updateHistogram(utilities)
+        updateHistogram(metricValues)
 
         })
         .catch(error => {

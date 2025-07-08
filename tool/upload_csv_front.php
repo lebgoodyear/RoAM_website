@@ -22,7 +22,7 @@
         <?php include 'tool_bar.php'; ?>
 
         <div id="next_button" hidden="true">
-            <a href="./calculate_utility_front.php" id="go_to_utility"><button>Next</button></a>
+            <a href="./calculate_metric_front.php" id="go_to_metric"><button>Next</button></a>
         </div>
 
     </div>

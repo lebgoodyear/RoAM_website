@@ -7,21 +7,21 @@ if (isset($_SESSION['jsonCriteriaArray'])) {
 
     $criteriaArray = json_decode($jsonCriteriaArray, true);
 
-    $fundamental = $criteriaArray[0];
+    $root = $criteriaArray[0];
 
     $additional = $criteriaArray[1];
 
     echo "<div id='criterion_selection'>";
 
-    echo "<div class='final_criteria_fundamental'>";
+    echo "<div class='final_criteria_root'>";
 
-    echo "<p>FUNDAMENTAL CRITERIA</p>";
+    echo "<p>ROOT CRITERIA</p>";
 
-    echo "<ul id='fundamental_variables'>";
+    echo "<ul id='root_variables'>";
     
-    foreach ($fundamental as $name) {
+    foreach ($root as $name) {
         $name_no_spaces = str_replace(' ', '_', $name);
-        echo "<div id=" . htmlspecialchars($name_no_spaces) . " class='fundamental_variable' data-name="  . htmlspecialchars($name) . "><li>" . htmlspecialchars($name) . "</li></div>";
+        echo "<div id=" . htmlspecialchars($name_no_spaces) . " class='root_variable' data-name="  . htmlspecialchars($name) . "><li>" . htmlspecialchars($name) . "</li></div>";
     }
 
     echo "</ul>";

@@ -14,18 +14,17 @@
 
     <div class="home_main">
         <div class="about">
-            <!--<strong>Welcome to the online DARe tool</strong>-->
             <p> 
-                <strong>Decision Analysis Refinement (DARe)</strong>
+                <strong>Root/Additional Metric (RoAM)</strong>
             </p>
             <p id = "description">
-                A framework for transparent quantative meta-analyses
+                A framework for goal-centred metric construction
             </p>
         </div>
         <div class="options">
             <div class="new shortcut">
                 <p>New here?</p>
-                <button>Explore DARe</button>
+                <button>Explore RoAM</button>
             </div>
             <div class="returning shortcut">
                 <p>Old hat?</p>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset = "UTF-8">
-    <title>Calculate Utility</title>
+    <title>Construct Metric</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="select_weights.js" defer></script>
@@ -28,7 +28,7 @@
     </div>
 
 
-    <div class = "main" id="main_utility">
+    <div class = "main" id="main_metric">
 
         <div id="work_space">
 
@@ -56,9 +56,9 @@
                     </div>
 
                     <div id="calculate_button">
-                        <form id="store_weights" action="calculate_utility_back.php" method="post">
+                        <form id="store_weights" action="calculate_metric_back.php" method="post">
                             <input type="hidden" id="criteria_weights_array" name="jsonWeightsArray">
-                            <button type="submit" id="calculate_utility">Calculate</button>
+                            <button type="submit" id="calculate_metric">Calculate</button>
                         </form>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
 
         <div id="plot_space">
             <div id="results_display">
-                <p>Distribution of utilities</p>
+                <p>Distribution of metric values</p>
                 <div id="results_container"></div>
                 <canvas id="histogramChart"></canvas>
             </div>

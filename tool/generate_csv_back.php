@@ -15,7 +15,7 @@ $newData = $_SESSION['newData'];
 
 // Set headers for direct download
 header('Content-Type: text/csv');
-header('Content-Disposition: attachment; filename="data_with_utilities.csv"');
+header('Content-Disposition: attachment; filename="data_with_metric_values.csv"');
 header('Pragma: no-cache');
 header('Expires: 0');
 header('Cache-Control: must-revalidate');

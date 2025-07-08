@@ -104,8 +104,7 @@ header {
 }
 
 #logo {
-  max-width: 78px;
-  border-radius: 0.5rem;
+  max-width: 98px;
 }
 
 #logo_div {
@@ -116,6 +115,7 @@ header {
 
 .title p {
   margin: 0 0 0 1rem;
+  color: var(--lightgrey);
 }
 
 nav ul {
@@ -215,7 +215,7 @@ nav ul {
 }
 
 #criteria,
-#utility {
+#metric {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,7 +334,7 @@ input {
  }
 
 #column_names ul,
-#fundamental_drop ul,
+#root_drop ul,
 #additional_drop ul {
   display: flex;
   flex: 1 0 auto;
@@ -378,7 +378,7 @@ input {
   gap: 2rem;
 }
 
-#fundamental_drop,
+#root_drop,
 #additional_drop {
   display: flex;
   flex-direction: column;
@@ -388,16 +388,16 @@ input {
   position: relative;
 }
 
-#fundamental_drop ul,
+#root_drop ul,
 #additional_drop ul {
   padding-bottom: 3.5rem;
 }
 
 
 
-/* CALCULATE UTILITY */
+/* CONSTRUCT METRIC  */
 
-#main_utility {
+#main_metric {
   display: flex;
   flex-direction: row;
   font-size: 1rem;
@@ -424,12 +424,12 @@ input {
   gap: 1rem;
 }
 
-.final_criteria_fundamental,
+.final_criteria_root,
 .final_criteria_additional {
   font-weight: 900;
 }
 
-.final_criteria_fundamental > ul,
+.final_criteria_root > ul,
 .final_criteria_additional > ul {
   display: flex;
   justify-content: flex-start;
@@ -445,7 +445,7 @@ input {
   flex-direction: column;
 }
 
-.fundamental_variable {
+.root_variable {
   background-color: var(--lightgrey);
   color: var(--darkblue);
   border-radius: 0.5rem;

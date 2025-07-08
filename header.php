@@ -3,12 +3,12 @@
 <header>
     <a class="stamp" href="/index.php">
             <div id="logo_div">
-                <img id = "logo" src="/img/logo.png" alt="Chart with four vertical bars and the letters D, A, R and e at the top of each.">
+                <img id = "logo" src="/img/logo.png" alt="Image of road heading into distance with the word ROAM underneath.">
             </div>
             <div class="title">
-                <p><strong>D</strong>ecision</p>
-                <p><strong>A</strong>nalysis</p>
-                <p><strong>Re</strong>finement</p>
+                <p><strong>Ro</strong>ot</p>
+                <p><strong>A</strong>dditional</p>
+                <p><strong>M</strong>etric</p>
         </div>
     </a>
     <nav id="navbar">
