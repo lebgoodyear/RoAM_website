@@ -16,7 +16,7 @@
             <li>About</li>
             <li>Tutorial</li>
             <a href = '/tool/upload_csv_front.php'><li>Online Tool</li></a>
-            <li>Reference</li>
+            <a href = '/cite.php'><li>Cite</li></a>
         </ul>
     </nav>
 </header>

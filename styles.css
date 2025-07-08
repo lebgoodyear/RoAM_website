@@ -569,3 +569,105 @@ input {
 #histgramChart {
   width: 100%;
 }
+
+
+
+/* CONSTRUCT METRIC  */
+
+
+.reference {
+  background-color: var(--white);
+  color: var(--darkblue);
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: space-around;
+  align-items: stretch;
+  width: 100%;
+}
+
+.citeMain {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
+.cite, .paper {
+  background-color: var(--white);
+  padding: 5% 116px;
+  flex: 1;
+}
+
+.cite {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.paper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+}
+
+.screenshot {
+  max-width: 60vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.paper > a {
+  max-width: 60vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.reference h2 {
+  text-align: center;
+}
+
+.link {
+  background-color: var(--midblue);
+  color: var(--white); 
+}
+
+.link h2 {
+  padding: 0px 1%;
+}
+
+.paperLink {
+  color: var(--darkblue);
+  text-decoration: underline;
+}
+
+.cite div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  font-weight: 500;
+}
+
+.bibtex, .textCitation {
+  background-color: var(--darkblue);
+  color: var(--white);
+  display: flex;
+  padding: 2%;
+  margin: 5%;
+  width: 30%;
+  border-radius: 0.9rem;
+  display: flex;
+  flex: 1;
+}
+
+.citeHeader {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+
+
