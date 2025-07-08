@@ -6,6 +6,7 @@
     <meta charset = "UTF-8">
     <title>Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
 </head>
 
 <body>

@@ -6,6 +6,7 @@
     <meta charset = "UTF-8">
     <title>Select criteria</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <script src="select_criteria.js" defer></script>
 </head>
 

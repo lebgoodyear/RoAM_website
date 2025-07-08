@@ -6,6 +6,7 @@
     <meta charset = "UTF-8">
     <title>Construct Metric</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="select_weights.js" defer></script>
 </head>

@@ -6,6 +6,7 @@
     <meta charset = "UTF-8">
     <title>Upload csv</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
     <script src="upload_csv.js" defer></script>
 </head>
 
