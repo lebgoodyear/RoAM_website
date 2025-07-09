@@ -673,3 +673,106 @@ input {
 
 
 
+/* ABOUT */
+
+
+.mainAbout {
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.mainQA {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.QA{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: var(--darkblue);
+  margin: 2% 5%;
+}
+
+.textbox {
+  color: var(--darkblue);
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  padding: 2%;
+  margin: 2% 5% 1% 5%;
+  border-radius: 0.9rem;
+}
+
+.textbox ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.textbox li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.textbox li::before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-right: 12px;
+  color: var(--darkblue);
+  background-color: var(--lightgrey);
+}
+
+.questionbox {
+  background-color: var(--midblue);
+  color: var(--white);
+  font-weight: 900;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 0.9rem;
+  width: 110%;
+  text-align: center;
+}
+
+.aboutButtons {
+  background-color: var(--lightgrey);
+  color: var(--darkblue);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex: 1 0 auto;
+  margin-bottom: 1%;
+}
+
+.buttonSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+}
+
+.indicatorArrow{
+  max-width: 8%;
+}
+

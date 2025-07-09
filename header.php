@@ -13,7 +13,7 @@
     </a>
     <nav id="navbar">
         <ul>
-            <li>About</li>
+            <a href = '/about.php'><li>About</li></a>
             <li>Tutorial</li>
             <a href = '/tool/upload_csv_front.php'><li>Online Tool</li></a>
             <a href = '/cite.php'><li>Cite</li></a>

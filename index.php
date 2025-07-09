@@ -25,7 +25,9 @@
         <div class="options">
             <div class="new shortcut">
                 <p>New here?</p>
-                <button>Explore RoAM</button>
+                <a href="/about.php">
+                    <button>Explore RoAM</button>
+                </a>
             </div>
             <div class="returning shortcut">
                 <p>Old hat?</p>
