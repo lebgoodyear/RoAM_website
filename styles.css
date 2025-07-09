@@ -91,7 +91,7 @@ header {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   display: flex;
-  padding: 8px 116px;
+  padding: 16px 116px;
   align-items: center;
   font-size: 1.2rem;
 }
