@@ -57,14 +57,14 @@ ul {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  colour: var(--midgrey);
+  color: var(--midgrey);
 }
 
 .main {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  colour: var(--midgrey);
+  color: var(--midgrey);
   padding: var(--const_padding);
 }
 
