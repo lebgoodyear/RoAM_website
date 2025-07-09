@@ -576,7 +576,7 @@ input {
 
 
 .reference {
-  background-color: var(--white);
+  background-color: var(--lightgrey);
   color: var(--darkblue);
   font-weight: 900;
   display: flex;
@@ -594,7 +594,7 @@ input {
 }
 
 .cite, .paper {
-  background-color: var(--white);
+  background-color: var(--lightgrey);
   padding: 5% 116px;
   flex: 1;
 }
@@ -611,7 +611,8 @@ input {
   display:flex;
   justify-content: center;
   align-items: center;
-  max-width: 40%;
+  max-width: 50%;
+  padding-right: 0px;
 }
 
 .screenshot {
@@ -647,7 +648,7 @@ input {
 .cite div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   font-weight: 500;
 }
@@ -658,10 +659,11 @@ input {
   display: flex;
   padding: 2%;
   margin: 5%;
-  width: 30%;
   border-radius: 0.9rem;
-  display: flex;
-  flex: 1;
+}
+
+.bibtex pre, .bibtex code {
+  margin: 0;
 }
 
 .citeHeader {
