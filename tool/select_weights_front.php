@@ -15,6 +15,12 @@
 
     <?php require '../header.php'; ?>
 
+    <div class="about">
+        <p> 
+            <strong>RoAM construction tool</strong>
+        </p>
+    </div>
+
     <div id="progress">
         <div id="back_button">
             <a href="./select_criteria_front.php"><button>Back</button></a>

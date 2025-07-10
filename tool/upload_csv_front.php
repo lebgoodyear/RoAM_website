@@ -14,6 +14,12 @@
 
     <?php require '../header.php'; ?>
 
+    <div class="about">
+        <p> 
+            <strong>RoAM construction tool</strong>
+        </p>
+    </div>
+
     <div id="progress">
         
         <div id="back_button" hidden="true">

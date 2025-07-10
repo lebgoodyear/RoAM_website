@@ -91,7 +91,7 @@ header {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   display: flex;
-  padding: 16px 116px;
+  padding: 16px 116px 4px 116px;
   align-items: center;
   font-size: 1.2rem;
 }
@@ -234,7 +234,7 @@ nav ul {
 #progress {
   background-color: var(--darkblue);
   padding: var(--const_padding);
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
   display: flex;
   align-items: center;
