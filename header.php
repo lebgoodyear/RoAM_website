@@ -14,7 +14,7 @@
     <nav id="navbar">
         <ul>
             <a href = '/about.php'><li>About</li></a>
-            <li>Tutorial</li>
+            <a href = '/tutorial.php'><li>Tutorial</li></a>
             <a href = '/tool/upload_csv_front.php'><li>Online Tool</li></a>
             <a href = '/cite.php'><li>Cite</li></a>
         </ul>

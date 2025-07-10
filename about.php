@@ -91,7 +91,7 @@
                 </div>
             
                 <div class="buttonSet">
-                    <a href="https://arxiv.org/abs/2507.01526">
+                    <a href = '/tutorial.php'>
                         <button>
                             To get started
                             <div class="link">check out our tutorial</div>
