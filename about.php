@@ -82,31 +82,19 @@
 
             <div class="aboutButtons">
                 <div class="buttonSet">
-                    <!--<div class="arrows">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                    </div>-->
                     <a href="https://arxiv.org/abs/2507.01526">
                         <button>
-                            For more information, read our paper on&nbsp<span class="link">arXiv</span>
+                            For more information
+                            <div class="link">read our paper on arXiv</div>
                         </button>
                     </a>
                 </div>
             
                 <div class="buttonSet">
-                    <!--<div class="arrows">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                        <img class="indicatorArrow" src="/img/arrow.png">
-                    </div>-->
-                    <a>
+                    <a href="https://arxiv.org/abs/2507.01526">
                         <button>
-                            To get started, check out our&nbsp<span class="link">tutorial</span>
+                            To get started
+                            <div class="link">check out our tutorial</div>
                         </button>
                     </a>
                 </div>
