@@ -798,3 +798,70 @@ input {
   text-decoration: underline;
 }
 
+
+
+/* TUTORIAL */
+
+
+.mainTutorial {
+  background-color: var(--white);
+  color: var(--darkblue);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  padding: 3% 116px 3% 116px;
+  margin: 0 auto;
+  gap:3rem;
+}
+
+.workflow {
+  max-width: 50%;
+  object-fit: contain;
+}
+
+.egIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+  width: 100%;
+  margin: 0;
+}
+
+.egIntroText {
+  font-style: italic;
+  max-width: 40%;
+  border: 0.5rem solid var(--midblue);
+  border-radius: 0.9rem;
+  padding: 2rem;
+}
+
+.egIntroImage {
+  max-width: 30%; 
+}
+
+.egIntroImage img {
+  max-width: 95%; 
+}
+
+.egStepTitle {
+  background-color: var(--darkblue);
+  color: var(--lightgrey);
+  padding: 36px 128px 36px 128px;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.egStep {
+  max-width: 100%;
+  border: 0.5rem solid var(--darkblue);
+  color: var(--darkblue);
+  background-color: var(--lightgrey);
+  border-radius: 0.9rem;
+  padding: 2rem;
+  width: 90%;
+}
