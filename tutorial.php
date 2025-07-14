@@ -46,20 +46,27 @@
             </div>
 
             <div class="egStepTitle">STEP 1</div>
-
+            
             <div class="egStep">
-                <h2>STEP 1</h2>
-                <h3>Upload dataset</h3>
-                <p>Upload your dataset to the platform, either by dragging and dropping
-                    or browsing your files. Make sure all your data fields have clear
-                    column headings and any fields you want to choose as criteria are scaled
-                    between 0 and 1 if they are numerical.
-                </p>
+                <div class="egStepText">
+                    <h2>Upload dataset</h2>
+                    <p>Upload your dataset to the platform, either by dragging and dropping
+                        or browsing your files. Make sure all your data fields have clear
+                        column headings and any fields you want to choose as criteria are scaled
+                        between 0 and 1 if they are numerical.
+                    </p>
+                </div>
+                <div class="egStepImage">
+                    <img src="img/step1a.png">
+                    <img class="arrow" src="img/arrow.png">
+                    <img src="img/step1b.png">
+                </div>
             </div>
 
-            <div class="egStep">
-                <h2>STEP 2</h2>
-                <h3>Select criteria</h3>
+            <div class="egStepTitle">STEP 2</div>
+
+            <div class="egStepText">
+                <h2>Select criteria</h2>
                 <p>You need to choose which criteria contribute to a successful interventions.</p>
                 <p>Firstly, effectiveness. This is the most important as it is a direct measure of
                     how well an intervention worked.
@@ -72,9 +79,10 @@
                 </p>
             </div>
 
-            <div class="egStep">
-                <h2>STEP 3</h2>
-                <h3>Define criteria weighting</h3>
+            <div class="egStepTitle">STEP 3</div>
+
+            <div class="egStepText">
+                <h2>Define criteria weighting</h2>
                 <p>You need to choose weights for Additional criteria.</p>
                 <p>Which criteria are most important to you and should have more
                     influence over the final metric values?

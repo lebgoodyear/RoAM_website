@@ -812,8 +812,7 @@ input {
   justify-content: space-around;
   align-items: center;
   flex: 1 0 auto;
-  padding: 3% 116px 3% 116px;
-  margin: 0 auto;
+  margin: 3% 15%;
   gap:3rem;
 }
 
@@ -826,9 +825,8 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
   width: 100%;
-  margin: 0;
+  gap: 10rem;
 }
 
 .egIntroText {
@@ -840,7 +838,7 @@ input {
 }
 
 .egIntroImage {
-  max-width: 30%; 
+  max-width: 35%; 
 }
 
 .egIntroImage img {
@@ -848,20 +846,47 @@ input {
 }
 
 .egStepTitle {
-  background-color: var(--darkblue);
+  background-color: var(--midblue);
   color: var(--lightgrey);
-  padding: 36px 128px 36px 128px;
+  padding: 36px 100%;
   text-align: center;
   font-size: 2rem;
   width: 100%;
+  font-weight: 900;
+  margin: 0;
 }
 
 .egStep {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 0 auto;
+  gap: 3rem;
+}
+
+.egStepText {
   max-width: 100%;
   border: 0.5rem solid var(--darkblue);
   color: var(--darkblue);
   background-color: var(--lightgrey);
   border-radius: 0.9rem;
   padding: 2rem;
-  width: 90%;
+  width: 100%;
+}
+
+.egStepImage {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.egStepImage img {
+  max-width: 48%; 
+}
+
+.egStepImage .arrow {
+  max-width: 4%;
+  height: auto;
+  object-fit: contain;
 }
