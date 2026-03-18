@@ -860,7 +860,7 @@ input {
 .egStep {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex: 1 0 auto;
   gap: 3rem;
@@ -877,13 +877,16 @@ input {
 }
 
 .egStepImage {
-  width: 100%;
+  width: 90%;
   display: flex;
-  justify-content: space-evenly;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .egStepImage img {
   max-width: 48%; 
+  display: block;
 }
 
 .egStepImage .arrow {
