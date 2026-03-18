@@ -677,7 +677,7 @@ input {
 
 
 .mainAbout {
-  background-color: var(--lightgrey);
+  background-color: var(--white);
   color: var(--darkblue);
   font-size: 1rem;
   display: flex;
@@ -702,6 +702,7 @@ input {
   border-radius: 5%;
   border-color: var(--darkblue);
   margin: 2% 5%;
+  background-color: var(--lightgrey);
 }
 
 .textbox {
