@@ -147,10 +147,23 @@ let bins = [];
 let binLabels = [];
 let histogramChart = null;
 
+function matchPlotHeight() {
+    const workSpace = document.getElementById('work_space');
+    const plotSpace = document.getElementById('plot_space');
+    plotSpace.style.height = workSpace.offsetHeight + 'px';
+}
+
+// Watches #work_space and re-runs matchPlotHeight if it changes size
+const resizeObserver = new ResizeObserver(() => matchPlotHeight());
+resizeObserver.observe(document.getElementById('work_space'));
+
+window.addEventListener('resize', matchPlotHeight);
+
 // Initialize an empty chart
 function initializeEmptyChart() {
 
     const ctx = document.getElementById('histogramChart').getContext('2d');
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
     histogramChart = new Chart(ctx, {
         type: 'bar',
@@ -163,6 +176,7 @@ function initializeEmptyChart() {
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             plugins: {
                 title: {
                 display: false,
@@ -181,18 +195,26 @@ function initializeEmptyChart() {
             scales: {
                 y: {
                     beginAtZero: true,
+                    ticks: {
+                        font: { size: rem * 1.2 }
+                    },
                     title: {
                         display: true,
-                        text: 'Frequency'
+                        text: 'Frequency',
+                        font: { size: rem * 1.2 }
                     }
                 },
                 x: {
                     type: 'category',
+                    ticks: {
+                        font: { size: rem * 1.2 }
+                    },
                     title: {
                         display: true,
-                        text: 'Metric'
-                    },
-                },
+                        text: 'Metric',
+                        font: { size: rem * 1.2 }
+                    }
+                }
             },
         },
     });
@@ -256,8 +278,12 @@ calculateButton.addEventListener("click", (event) => {
     }
 });  
 
-document.addEventListener('DOMContentLoaded', initializeEmptyChart);
-
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('work_space height before anything:', document.getElementById('work_space').offsetHeight);
+    console.log('plot_space height before anything:', document.getElementById('plot_space').offsetHeight);
+    matchPlotHeight();
+    initializeEmptyChart();
+});
 
 document.getElementById('next_button').addEventListener('click', event => {
     event.preventDefault();

@@ -51,7 +51,7 @@
                 </div>
 
                 <div id="sumbox">
-                    <p>Checksum</p>
+                    <p>Sum of weights =</p>
                     <div id="sum">
 
                     </div>
@@ -78,7 +78,9 @@
             <div id="results_display">
                 <p>Distribution of metric values</p>
                 <div id="results_container"></div>
-                <canvas id="histogramChart"></canvas>
+                <div id="chart_wrapper">
+                    <canvas id="histogramChart"></canvas>
+                </div>
             </div>
         </div>
 

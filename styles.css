@@ -7,7 +7,7 @@
   --midgrey: #BDBDBD;
   --darkgrey:  #676767;
   --black: #000000;
-  --const_padding: 0px 116px 0px 116px;
+  --const_padding: 0px 8% 0px 8%;
 }
 
 html, body {
@@ -72,13 +72,14 @@ ul {
 
 /* FOOTER */
 
+
 footer {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 116px;
+  padding: 0.1px 8%;
   flex-shrink: 0;
   font-size: 1rem;
 }
@@ -87,11 +88,12 @@ footer {
 
 /* HEADER */
 
+
 header {
   background-color: var(--darkblue);
   color: var(--lightgrey);
   display: flex;
-  padding: 16px 116px 4px 116px;
+  padding: 0.5% 5% 0.05% 5%;
   align-items: center;
   font-size: 1.2rem;
 }
@@ -126,6 +128,7 @@ nav ul {
 
 
 /* HOME PAGE */
+
 
 .options {
   background-color: var(--white);
@@ -192,6 +195,7 @@ nav ul {
 
 /* TOOL */
 
+
 #tool_bar_list {
   background: var(--midgrey);  
   border: 2px solid var(--darkblue);
@@ -257,6 +261,7 @@ nav ul {
 
 /* CSV UPLOAD */
 
+
 input {
   font-size: 1.5rem;
   cursor: pointer;
@@ -301,6 +306,7 @@ input {
 
 /* SELECT CRITERIA */
 
+
 #content {
   display: flex;
   flex: 1 0 auto;
@@ -317,10 +323,10 @@ input {
 .criteria {
   position: sticky;
   top: 0;
-  background-color: var(--white); /* Match your page background */
+  background-color: var(--white);
   padding: 10px 0;
-  z-index: 10; /* Ensures it stays above other content */
-  margin: 0; /* Remove default margins */
+  z-index: 10;
+  margin: 0;
 }
 
 #column_names {
@@ -397,12 +403,14 @@ input {
 
 /* CONSTRUCT METRIC  */
 
+
 #main_metric {
   display: flex;
   flex-direction: row;
-  font-size: 1rem;
-  padding: 3rem 0;
-  margin: 0 116px;
+  align-items: flex-start;
+  font-size: 1.3rem;
+  padding: 2.5rem 0;
+  margin: 0 8%;
   gap: 2rem;
 }
 
@@ -456,7 +464,9 @@ input {
 
 #plot_space {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
   width: 70%;
   background-color: var(--lightgrey);
   border-radius: 2rem;
@@ -554,9 +564,14 @@ input {
 }
 
 #results_display {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   width: 100%;
+  box-sizing: border-box;
   padding: 2rem;
-  font-size: 1.5rem;
+  min-height: 0;
+  font-size: 1.7rem;
   text-align: center;
   color: var(--darkblue);
   font-weight: 600;
@@ -566,13 +581,20 @@ input {
   margin: 0 0 2rem 0;
 }
 
-#histgramChart {
+#chart_wrapper {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+#histogramChart {
   width: 100%;
 }
 
 
 
-/* CONSTRUCT METRIC  */
+/* Reference  */
 
 
 .reference {
@@ -595,7 +617,7 @@ input {
 
 .cite, .paper {
   background-color: var(--lightgrey);
-  padding: 5% 116px;
+  padding: 5% 8%;
   flex: 1;
 }
 
