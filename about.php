@@ -44,6 +44,13 @@
                     <div class="textbox">
                         <p>RoAM stands for Root/Additional Metric. A RoAM is constructed by choosing criteria that you think are an important part of achieving your goal. These criteria are split into 'root', which are criteria that result in complete failure if they are not met, and 'additional' which are extra criteria that scale the metric but do not result in failure if they are not met.
                         </p>
+                        <p>To development your own RoAM, you can use either:
+                            <ul>
+                            <li>Our online tool, which enables you to formulate a metric and calculate metric values for your dataset.
+                            </li>
+                            <li>Our R package, which has further functionality, including confidence intervals around individual RoAM values.
+                            </li>
+                        </p>
                     </div>
                 </div>
                 <div class="QA">
@@ -71,7 +78,7 @@
                     <a href="https://arxiv.org/abs/2507.01526">
                         <button>
                             For more information
-                            <div class="link">read our paper on arXiv</div>
+                            <div class="link">check out our paper on arXiv</div>
                         </button>
                     </a>
                 </div>
@@ -79,11 +86,21 @@
                 <div class="buttonSet">
                     <a href = '/tutorial.php'>
                         <button>
-                            To get started
+                            To get started with our online tool
                             <div class="link">check out our tutorial</div>
                         </button>
                     </a>
                 </div>
+
+                <div class="buttonSet">
+                    <a href="https://github.com/lebgoodyear/RoAM">
+                        <button>
+                            To get started with R
+                            <div class="link">check out our package on GitHub</div>
+                        </button>
+                    </a>
+                </div>
+
             </div>
         </div>
 
