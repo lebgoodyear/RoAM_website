@@ -17,6 +17,7 @@
             <a href = '/tutorial.php'><li>Tutorial</li></a>
             <a href = '/tool/upload_csv_front.php'><li>Online Tool</li></a>
             <a href = '/cite.php'><li>Cite</li></a>
+            <a href = '/contact_front.php'><li>Contact</li></a>
         </ul>
     </nav>
 </header>
