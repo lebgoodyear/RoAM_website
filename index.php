@@ -19,7 +19,7 @@
                 <strong>Root/Additional Metric (RoAM)</strong>
             </p>
             <p id = "description">
-                A framework for goal-centred metric construction
+                A framework for goal-centred utility metric construction
             </p>
         </div>
         <div class="options">
@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="returning shortcut">
-                <p>Old hat?</p>
+                <p>Old hand?</p>
                 <a href="/tool/upload_csv_front.php">
                     <button>Get started</button>
                 </a>
